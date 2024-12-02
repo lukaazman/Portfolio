@@ -96,16 +96,20 @@ section:hover {
 }
 
 table {
-    width: 80%;
+    width: 100%;
+    max-width: 75%;
     margin: 2rem auto;
     border-collapse: collapse;
+    text-align: center;
 }
 
 td {
     padding: 1.5rem;
     border: none;
     text-align: center;
+    vertical-align: top;
     transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 50%;
 }
 
 td:hover {
