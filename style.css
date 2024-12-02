@@ -98,7 +98,7 @@ section:hover {
 table {
     width: 100%;
     max-width: 75%;
-    margin: 2rem auto;
+    margin: 4rem 9.5%;/* 2rem auto */
     border-collapse: collapse;
     text-align: center;
 }
