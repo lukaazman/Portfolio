@@ -38,7 +38,7 @@ const translations = {
       }
   }
 };
-
+ 
 let currentLanguage = 'english';
 
 function toggleLanguage() {
