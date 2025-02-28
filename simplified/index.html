@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luka Ažman</title>
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/mono-911225" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.cdnfonts.com/css/cutive-mono" rel="stylesheet">          
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1><a href="#home">Luka Ažman</a></h1>
+        <div id="menu-icon">&#9776;</div>
+    </header>
+    <button id="theme-toggle" class="theme-toggle">&#128161;</button>
+    <nav id="menu" class="menu-hidden">
+        <a href="#about" onclick="showSection('about')">About</a>
+        <a href="#projects" onclick="showSection('proj')">Galery</a>
+        <a href="#skl" onclick="showSection('skl')">Skills</a>
+        <a href="../résumé.docx">Résumé</a>
+    </nav>
+    <main id="about">
+        <section id="home">
+            <p>Welcome to my portfolio! I am <span class="highlight">Luka Ažman</span>, an aspiring <span class="highlight">Game Developer</span> and <span class="highlight">Software Programmer</span>.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            
+            <div class="project">
+                <h3><a href="https://unilj-my.sharepoint.com/:f:/g/personal/la92762_student_uni-lj_si/EpOXVzTL6MtEjj7Uzboghx4B6YLAE4iA_KnZpz4WHiS1qg?e=IdGDiK">PixeLife</a> <span>2D Unity C#</span></h3>
+                <p>Pixel art game created in Unity with C# and Aseprite.</p>
+            </div>
+            <div class="project">
+                <h3><a href="https://unilj-my.sharepoint.com/:f:/g/personal/la92762_student_uni-lj_si/EhsFKx0zmmhGgW-VEdppocsBoN5a3iSXEC7Rq5SxuTf2kw?e=N2wFO3">Backrooms</a> <span>3D UnrealEngine VisualScripting</span></h3>
+                <p>A horror game developed in Unreal Engine using Visual Scripting as a graduation project.</p>
+            </div>
+            
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Unity</li>
+                <li>Unreal Engine</li>
+                <li>C</li>
+                <li>C#</li>
+                <li>SQL</li>
+                <li>Java</li>
+                <li>Adobe</li>
+                <li>Linux</li>
+                <li>Windows</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: luka.azman9@gmail.com</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/luka-azman-0275a01b1/">LinkedIn</a>
+                <a href="https://github.com/lukaazman">GitHub</a>
+            </div>
+        </section>
+    </main>
+    <main id="proj" style="display: none;">
+        <div id="gride">
+            <img src="backrooms//11.jpg"/>
+            <img src="backrooms//13.jpg"/>
+            <img src="backrooms//15.jpg"/>
+            <img src="pixelife/image1.gif"/>
+            <img src="backrooms//19.jpg"/>
+            <img src="backrooms//17.jpg"/>
+            <img src="backrooms//18.jpg"/>
+            <img src="pixelife/image2.gif"/>
+            <img src="backrooms//20.jpg"/>
+            <img src="backrooms//16.jpg"/>
+            <img src="backrooms//21.jpg"/>
+            <img src="pixelife/image3.gif"/>
+            <img src="backrooms//22.jpg"/>
+            <img src="backrooms//23.jpg"/>
+            <img src="backrooms//26.jpg"/>
+            <img src="pixelife/image4.gif"/>
+            <img src="backrooms//27.jpg"/>
+            <img src="backrooms//25.jpg"/>
+            <img src="backrooms//24.jpg"/>
+            <img src="pixelife/image5.gif"/>
+            <img src="backrooms//28.jpg"/>
+            <img src="backrooms//29.jpg"/>
+            <img src="backrooms//32.jpg"/>
+            <img src="pixelife/image6.gif"/>
+            <img src="backrooms//30.jpg"/>
+            <img src="backrooms//31.jpg"/>
+            <img src="backrooms//33.jpg"/>
+            <img src="pixelife/image7.gif"/>
+        </div>
+    </main>
+
+    <main id="skl" style="display: none;">
+        <h2 id="hvm">Skills</h2>
+        <div class="scrolling-list-container">
+            <ul class="scrolling-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Unity</li>
+                <li>UnrealEngine</li>
+                <li>C</li>
+                <li>C#</li>
+                <li>SQL</li>
+                <li>Java</li>
+                <li>Adobe</li>
+                <li>Linux</li>
+                <li>Windows</li>
+            </ul>
+    </main>
+
+    <footer>
+        <svg viewBox="0 0 100 10" class="footer-svg">
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
+                Luka Ažman
+            </text>
+        </svg>
+    </footer>
+</body>
+</html>
