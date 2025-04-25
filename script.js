@@ -11,6 +11,7 @@ const translations = {
       backroomsDesc: "Horror game made in Unreal Engine with Visual Scripting for my graduation project.",
       pixeLifeDesc: "Pixel art game made in Unity with C# and Aseprite.",
       simpleDesc: "Browser extension made for simpler browsing using commands.",
+      upnoteDesc: "Minimalistic and slick Markdown Text Editor.",
       emailMe: "Email me",
       colorScheme: {
           primary: "#ffcc00",
@@ -30,6 +31,7 @@ const translations = {
       backroomsDesc: "Grozljiva igra narejena v Unreal Engine z vizualnim skriptiranjem za moj zaključni projekt.",
       pixeLifeDesc: "Pixel art igra narejena v Unity s C# in Aseprite.",
       simpleDesc: "Razširitev brskalnika za enostavnejše brskanje z uporabo ukazov.",
+      upnoteDesc: "Minimalističen in eleganten urejevalnik besedil Markdown.",
       emailMe: "Pišite mi",
       colorScheme: {
           primary: "#2978b5",
@@ -61,7 +63,8 @@ function updateContent() {
 
   document.querySelector('#projects table tr:first-child td:first-child p').textContent = translations[currentLanguage].backroomsDesc;
   document.querySelector('#projects table tr:first-child td:nth-child(2) p').textContent = translations[currentLanguage].pixeLifeDesc;
-  document.querySelector('#projects table tr:first-child td:last-child p').textContent = translations[currentLanguage].simpleDesc;
+  document.querySelector('#projects table tr:first-child td:nth-child(3) p').textContent = translations[currentLanguage].simpleDesc;
+  document.querySelector('#projects table tr:first-child td:last-child p').textContent = translations[currentLanguage].upnoteDesc;
 
   document.querySelector('#mail a').textContent = translations[currentLanguage].emailMe;
 }
