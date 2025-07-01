@@ -4,7 +4,7 @@ const translations = {
       skills: "Skills",
       resume: "Résumé",
       contact: "Contact",
-      welcome: "Welcome to my Portfolio! My name is Luka Ažman and I am <br> a future <span class='job'>Software Programmer</span> and <span class='job'>Game Developer</span>",
+      welcome: "Welcome to my Portfolio! My name is Luka Ažman and I am <br> a future <span class='job'>Software Programmer</span> and <span class='job'>Game Developer</span>.",
       projectsTitle: "PROJECTS",
       skillsTitle: "SKILLS",
       contactTitle: "CONTACT ME",
