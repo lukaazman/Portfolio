@@ -52,7 +52,7 @@ function toggleLanguage() {
 function updateContent() {
   document.querySelector('nav a[href="#projects"]').textContent = translations[currentLanguage].projects;
   document.querySelector('nav a[href="#skills"]').textContent = translations[currentLanguage].skills;
-  document.querySelector('nav a[href="résumé.docx"]').textContent = translations[currentLanguage].resume;
+  document.querySelector('nav a[href="résumé.pdf"]').textContent = translations[currentLanguage].resume;
   document.querySelector('nav a[href="#contact"]').textContent = translations[currentLanguage].contact;
 
   document.querySelector('#home p').innerHTML = translations[currentLanguage].welcome;
