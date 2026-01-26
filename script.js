@@ -8,15 +8,19 @@ const translations = {
       projectsTitle: "PROJECTS",
       skillsTitle: "SKILLS",
       contactTitle: "CONTACT ME",
-      backroomsDesc: "Horror video game made in Unreal Engine with Visual Scripting for my highschool graduation project.",
-      pixeLifeDesc: "Pixel art walking simulator video game made in Unity and Aseprite.",
+      backroomsDesc: "Horror 3D video game made in Unreal Engine with Visual Scripting for my highschool graduation project.",
+      pixeLifeDesc: "Pixel art walking simulator 2D video game made in Unity and Aseprite.",
       simpleDesc: "Chrome Browser Extension made for simpler browsing using custom commands.",
       upnoteDesc: "Minimalistic and slick Markdown file Text Editor.",
+      cinescoreDesc: "Movie review site, made in a two-man group for a university project.",
+      cdDesc: "Doom clone 3D game made in WebGPU with a three-man group for a university project.",
       emailMe: "Email me",
       colorScheme: {
-          primary: "#ffcc00",
-          secondary: "#ff6600",
-          text: "#333"
+          primary: "#0052cc",
+          secondary: "#00d4ff",
+          text: "#1a1a1a",
+          background: "#f8f9fa",
+          accent: "#e74c3c"
       }
   },
   slovenian: {
@@ -28,15 +32,19 @@ const translations = {
       projectsTitle: "PROJEKTI",
       skillsTitle: "VEŠČINE",
       contactTitle: "KONTAKTIRAJTE ME",
-      backroomsDesc: "Grozljiva video igra, narejena v Unreal Engine z vizualnim skriptiranjem za moj maturitetni projekt.",
-      pixeLifeDesc: "Pixel art simulator hoje video igra izdelana v Unity in Aseprite.",
+      backroomsDesc: "Grozljiva 3D video igra, narejena v Unreal Engine z vizualnim skriptiranjem za moj maturitetni projekt.",
+      pixeLifeDesc: "Pixel art simulator hoje 2D video igra izdelana v Unity in Aseprite.",
       simpleDesc: "Razširitev brskalnika Chrome za preprostejše brskanje z ukazi po meri.",
       upnoteDesc: "Minimalističen in eleganten urejevalnik besedila datoteke Markdown.",
+      cinescoreDesc: "Spletna stran za ocenjevanje filmov, narejeno v dvo-osebni skupini za univerzitetni projekt.",
+      cdDesc: "Doom klon 3D igra narejena v WebGPU s tri-osebno skupino za univerzitetni projekt.",
       emailMe: "Pišite mi",
       colorScheme: {
-          primary: "#2978b5",
-          secondary: "#54a0de",
-          text: "#0a2472"
+          primary: "#0052cc",
+          secondary: "#00d4ff",
+          text: "#1a1a1a",
+          background: "#f8f9fa",
+          accent: "#e74c3c"
       }
   }
 };
@@ -61,10 +69,12 @@ function updateContent() {
   document.querySelector('h2:nth-of-type(2)').textContent = translations[currentLanguage].skillsTitle;
   document.querySelector('h2:nth-of-type(3)').textContent = translations[currentLanguage].contactTitle;
 
-  document.querySelector('#projects table tr:first-child td:first-child p').textContent = translations[currentLanguage].backroomsDesc;
-  document.querySelector('#projects table tr:first-child td:nth-child(2) p').textContent = translations[currentLanguage].pixeLifeDesc;
-  document.querySelector('#projects table tr:first-child td:nth-child(3) p').textContent = translations[currentLanguage].simpleDesc;
-  document.querySelector('#projects table tr:first-child td:last-child p').textContent = translations[currentLanguage].upnoteDesc;
+  document.querySelector('[data-project="backrooms"]').textContent = translations[currentLanguage].backroomsDesc;
+  document.querySelector('[data-project="pixelife"]').textContent = translations[currentLanguage].pixeLifeDesc;
+  document.querySelector('[data-project="simplesearch"]').textContent = translations[currentLanguage].simpleDesc;
+  document.querySelector('[data-project="upnote"]').textContent = translations[currentLanguage].upnoteDesc;
+  document.querySelector('[data-project="cinescore"]').textContent = translations[currentLanguage].cinescoreDesc;
+  document.querySelector('[data-project="crimsondawn"]').textContent = translations[currentLanguage].cdDesc;
 
   document.querySelector('#mail a').textContent = translations[currentLanguage].emailMe;
 }
@@ -74,6 +84,10 @@ function updateColorScheme() {
   document.documentElement.style.setProperty('--primary-color', colors.primary);
   document.documentElement.style.setProperty('--secondary-color', colors.secondary);
   document.documentElement.style.setProperty('--text-color', colors.text);
+  document.documentElement.style.setProperty('--background-color', colors.background);
+  document.documentElement.style.setProperty('--accent-color', colors.accent);
+  document.body.classList.add('theme-light');
+  document.body.classList.remove('theme-dark');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
