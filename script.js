@@ -14,7 +14,7 @@ const translations = {
       upnoteDesc: "Minimalistic and slick Markdown file Text Editor.",
       cinescoreDesc: "Movie review site, made in a two-man group for a university project.",
       cdDesc: "Doom clone 3D game made in WebGPU with a three-man group for a university project.",
-      gcDesc: "Fitness arcade fighting 3D game made in Unity.",
+      gcDesc: "3D model Fitness pack made in Blender.",
       emailMe: "Email me",
       colorScheme: {
           primary: "#0052cc",
@@ -39,7 +39,7 @@ const translations = {
       upnoteDesc: "Minimalističen in eleganten urejevalnik besedila datoteke Markdown.",
       cinescoreDesc: "Spletna stran za ocenjevanje filmov, narejeno v dvo-osebni skupini za univerzitetni projekt.",
       cdDesc: "Doom klon 3D igra narejena v WebGPU s tri-osebno skupino za univerzitetni projekt.",
-      gcDesc: "Fitnes arkadna borbena 3D igra narejena v Unity.",
+      gcDesc: "3D model Fitness pack narejen v Blenderju.",
       emailMe: "Pišite mi",
       colorScheme: {
           primary: "#0052cc",
