@@ -15,6 +15,7 @@ const translations = {
       cinescoreDesc: "Movie review site, made in a two-man group for a university project.",
       cdDesc: "Doom clone 3D game made in WebGPU with a three-man group for a university project.",
       gcDesc: "Fitness arcade fighting 3D game made in Unity.",
+      fullscansecurityDesc: "Mobile security application made in Android Studio.",
       emailMe: "Email me",
       colorScheme: {
           primary: "#0052cc",
@@ -40,6 +41,7 @@ const translations = {
       cinescoreDesc: "Spletna stran za ocenjevanje filmov, narejeno v dvo-osebni skupini za univerzitetni projekt.",
       cdDesc: "Doom klon 3D igra narejena v WebGPU s tri-osebno skupino za univerzitetni projekt.",
       gcDesc: "Fitnes arkadna borbena 3D igra narejena v Unity.",
+      fullscansecurityDesc: "Mobilna varnostna aplikacija narejena v Android Studiju.",
       emailMe: "Pišite mi",
       colorScheme: {
           primary: "#0052cc",
@@ -78,6 +80,7 @@ function updateContent() {
   document.querySelector('[data-project="cinescore"]').textContent = translations[currentLanguage].cinescoreDesc;
   document.querySelector('[data-project="crimsondawn"]').textContent = translations[currentLanguage].cdDesc;
   document.querySelector('[data-project="gymchaos"]').textContent = translations[currentLanguage].gcDesc;
+  document.querySelector('[data-project="fullscansecurity"]').textContent = translations[currentLanguage].fullscansecurityDesc;
 
   document.querySelector('#mail a').textContent = translations[currentLanguage].emailMe;
 }
