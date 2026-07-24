@@ -16,6 +16,7 @@ const translations = {
       cdDesc: "Doom clone 3D game made in WebGPU with a three-man group for a university project.",
       gcDesc: "Fitness arcade fighting 3D game made in Unity.",
       fullscansecurityDesc: "Mobile security application made in Android Studio.",
+      mdikranjDesc: "Website made for Medobčinsko društvo invalidov Kranj as a part of student work.",
       emailMe: "Email me",
       colorScheme: {
           primary: "#0052cc",
@@ -42,6 +43,7 @@ const translations = {
       cdDesc: "Doom klon 3D igra narejena v WebGPU s tri-osebno skupino za univerzitetni projekt.",
       gcDesc: "Fitnes arkadna borbena 3D igra narejena v Unity.",
       fullscansecurityDesc: "Mobilna varnostna aplikacija narejena v Android Studiju.",
+      mdikranjDesc: "Spletna stran narejena za Medobčinsko društvo invalidov Kranj kot del študentskega dela.",
       emailMe: "Pišite mi",
       colorScheme: {
           primary: "#0052cc",
@@ -81,6 +83,7 @@ function updateContent() {
   document.querySelector('[data-project="crimsondawn"]').textContent = translations[currentLanguage].cdDesc;
   document.querySelector('[data-project="gymchaos"]').textContent = translations[currentLanguage].gcDesc;
   document.querySelector('[data-project="fullscansecurity"]').textContent = translations[currentLanguage].fullscansecurityDesc;
+  document.querySelector('[data-project="mdikranj"]').textContent = translations[currentLanguage].mdikranjDesc;
 
   document.querySelector('#mail a').textContent = translations[currentLanguage].emailMe;
 }
