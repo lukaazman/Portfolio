@@ -1,178 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Luka Ažman">
-        <link rel="icon" href="https://img.icons8.com/?size=100&id=r6Mbs3RSJtkn&format=png&color=FFFFFF" type="image/png">
-        <title>Luka Ažman</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luka Ažman">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=r6Mbs3RSJtkn&format=png&color=FFFFFF" type="image/png">
+    <title>Luka Ažman | Portfolio</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&amp;display=swap" rel="stylesheet">
-        <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
-                
-        <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <header>
-            <h1><a href="#home">Luka Ažman</a></h1>
-        </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700;900&family=Cutive+Mono&display=swap" rel="stylesheet">
 
-        <nav>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="résumé.pdf">Résumé</a>
-          <a href="#contact">Contact</a>
-          <a id="ime"><img id="languageToggle" src="https://cdn-icons-png.flaticon.com/512/484/484633.png" 
-            width="25vh" height="25vh" alt="Translate" title="Translate"></a>
-      </nav>
-      
-        <main>
-            <section id="home">
-              <p>Welcome to my Portfolio! My name is Luka Ažman and I am <br> a future <span class="job">Software Programmer</span>
-            and <span class="job">Game Developer</span>.</p>
-            </section>
-            <h2 id="projekt">PROJECTS</h2>
-            <section id="projects">
-                <div class="projects-grid">
-                  <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/Backrooms';" style="cursor: pointer;">
-                    <h3>Backrooms <span class="project-year">2022-2023</span></h3>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="hero-name-bg" id="heroBg" aria-hidden="true">
+        <span>LUKA<br>AŽMAN</span>
+    </div>
+
+    <header class="topbar">
+        <a href="#home" class="logo" onclick="event.preventDefault(); showSection('home')">LUKA AŽMAN</a>
+        <div class="topbar-controls">
+            <button id="languageToggle" class="icon-btn" title="Translate" aria-label="Translate">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M2 12h20M12 2c2.8 3 4.2 6.4 4.2 10s-1.4 7-4.2 10c-2.8-3-4.2-6.4-4.2-10S9.2 5 12 2z"/>
+                </svg>
+            </button>
+            <button id="menuIcon" class="icon-btn menu-icon" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav id="menu" class="menu menu-hidden">
+        <a href="#experience" onclick="event.preventDefault(); showSection('experience')">[ EXPERIENCE ]</a>
+        <a href="#projects" onclick="event.preventDefault(); showSection('projects')">[ PROJECTS ]</a>
+        <a href="#skills" onclick="event.preventDefault(); showSection('skills')">[ SKILLS ]</a>
+        <a href="#contact" onclick="event.preventDefault(); showSection('contact')">[ CONTACT ]</a>
+        <a href="résumé.pdf" id="resumeLink">[ RÉSUMÉ ]</a>
+    </nav>
+
+    <main>
+        <section id="home" class="page active">
+            <div class="hero">
+                <p id="welcomeText" class="hero-text">
+                    Welcome to my Portfolio! My name is Luka Ažman and I am <br>
+                    a future <span class="accent">Software Programmer</span> and <span class="accent">Game Developer</span>.
+                </p>
+                <button class="cta" onclick="showSection('projects')">&gt; Explore Portfolio</button>
+            </div>
+        </section>
+
+        <section id="experience" class="page">
+            <div class="section-head">
+                <h2 id="experienceTitle">EXPERIENCE</h2>
+                <span class="section-tag">SORT: DESCENDING</span>
+            </div>
+
+            <div class="experience-list">
+                <article class="experience-entry">
+                    <div class="exp-meta">
+                        <span class="exp-date">JUN – JUL 2026</span>
+                        <span class="exp-type" data-exptype="mdikranj">[ STUDENT WORK ]</span>
+                    </div>
+                    <h3>MDI Kranj</h3>
+                    <p class="exp-desc" data-exp="mdikranj">Built the organization's website as part of student work for Medobčinsko društvo invalidov Kranj.</p>
+                </article>
+
+                <article class="experience-entry">
+                    <div class="exp-meta">
+                        <span class="exp-date">OCT 2021</span>
+                        <span class="exp-type" data-exptype="iskraemeco">[ INTERNSHIP ]</span>
+                    </div>
+                    <h3>Iskraemeco d.d.</h3>
+                    <p class="exp-desc" data-exp="iskraemeco">IT department internship — maintained and edited company websites.</p>
+                </article>
+            </div>
+
+            <p class="exp-footnote" id="expFootnote">Also completed seasonal part-time work in retail, hospitality, and logistics (2020–2025).</p>
+        </section>
+
+        <section id="projects" class="page">
+            <div class="section-head">
+                <h2 id="projectsTitle">PROJECTS</h2>
+                <span class="section-tag">SORT: CHRONOLOGICAL</span>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/Backrooms';">
+                    <div class="card-bar">
+                        <span>~/projects/backrooms</span>
+                        <span class="project-year">[ 2022-2023 ]</span>
+                    </div>
+                    <h3>Backrooms</h3>
                     <p class="project-description" data-project="backrooms">Horror 3D video game made in Unreal Engine with Visual Scripting for my highschool graduation project.</p>
-                    <ul class="skills-list">
-                      <li class="genres btn btn--plain" title="Unreal Engine">Unreal Engine</li>
-                      <a class="redirect" href="https://dev.epicgames.com/documentation/en-us/unreal-engine/blueprints-visual-scripting-in-unreal-engine"><li class="genres btn btn--plain" title="Blueprints" alt="Visual Scripting">Blueprints</li></a>
+                    <ul class="tag-list">
+                        <li>[ Unreal Engine ]</li>
+                        <li>[ Blueprints ]</li>
                     </ul>
-                  </article>
+                </article>
 
-                  <article class="project-card" onclick="window.location.href='https://unilj-my.sharepoint.com/:f:/g/personal/la92762_student_uni-lj_si/EpOXVzTL6MtEjj7Uzboghx4B6YLAE4iA_KnZpz4WHiS1qg?e=IdGDiK';" style="cursor: pointer;">
-                    <h3>PixeLife <span class="project-year">2024</span></h3>
+                <article class="project-card" onclick="window.location.href='https://unilj-my.sharepoint.com/:f:/g/personal/la92762_student_uni-lj_si/EpOXVzTL6MtEjj7Uzboghx4B6YLAE4iA_KnZpz4WHiS1qg?e=IdGDiK';">
+                    <div class="card-bar">
+                        <span>~/projects/pixelife</span>
+                        <span class="project-year">[ 2024 ]</span>
+                    </div>
+                    <h3>PixeLife</h3>
                     <p class="project-description" data-project="pixelife">Pixel art walking simulator 2D video game made in Unity and Aseprite.</p>
-                    <ul class="skills-list">
-                      <li class="genres btn btn--plain" title="Unity">Unity</li>
-                      <li class="genres btn btn--plain" title="C#">C#</li>
-                      <a class="redirect" href="https://www.aseprite.org/"><li class="genres btn btn--plain" title="Aseprite">Aseprite</li></a>
-                      <a class="redirect" href="https://www.inklestudios.com/ink/"><li class="genres btn btn--plain" title="Ink">Ink</li></a>
+                    <ul class="tag-list">
+                        <li>[ Unity ]</li>
+                        <li>[ C# ]</li>
+                        <li>[ Aseprite ]</li>
+                        <li>[ Ink ]</li>
                     </ul>
-                  </article>
+                </article>
 
-                  <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/SimpleSearch';" style="cursor: pointer;">
-                    <h3>SimpleSearch <span class="project-year">2024</span></h3>
+                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/SimpleSearch';">
+                    <div class="card-bar">
+                        <span>~/projects/simplesearch</span>
+                        <span class="project-year">[ 2024 ]</span>
+                    </div>
+                    <h3>SimpleSearch</h3>
                     <p class="project-description" data-project="simplesearch">Chrome Browser Extension made for simpler browsing using custom commands.</p>
-                    <ul class="skills-list">
-                      <li class="genres btn btn--plain" title="HTML">HTML</li>
-                      <li class="genres btn btn--plain" title="CSS">CSS</li>
-                      <li class="genres btn btn--plain" title="JavaScript">JavaScript</li>
+                    <ul class="tag-list">
+                        <li>[ HTML ]</li>
+                        <li>[ CSS ]</li>
+                        <li>[ JavaScript ]</li>
                     </ul>
-                  </article>
+                </article>
 
-                  <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/UpNote';" style="cursor: pointer;">
-                    <h3>UpNote <span class="project-year">2025</span></h3>
+                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/UpNote';">
+                    <div class="card-bar">
+                        <span>~/projects/upnote</span>
+                        <span class="project-year">[ 2025 ]</span>
+                    </div>
+                    <h3>UpNote</h3>
                     <p class="project-description" data-project="upnote">Minimalistic and slick Markdown file Text Editor.</p>
-                    <ul class="skills-list">
-                      <li class="genres btn btn--plain" title="Python">Python</li>
-                      <li class="genres btn btn--plain" title="CSS">CSS</li>
-                      <li class="genres btn btn--plain" title="HTML">HTML</li>
+                    <ul class="tag-list">
+                        <li>[ Python ]</li>
+                        <li>[ CSS ]</li>
+                        <li>[ HTML ]</li>
                     </ul>
-                  </article>
+                </article>
 
-                  <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/CineScore';" style="cursor: pointer;">
-                    <h3>CineScore <span class="project-year">2025</span></h3>
+                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/CineScore';">
+                    <div class="card-bar">
+                        <span>~/projects/cinescore</span>
+                        <span class="project-year">[ 2025 ]</span>
+                    </div>
+                    <h3>CineScore</h3>
                     <p class="project-description" data-project="cinescore">Movie review site, made in a two-man group for a university project.</p>
-                    <ul class="skills-list">
-                      <li class="genres btn btn--plain" title="C#">C#</li>
-                      <li class="genres btn btn--plain" title="CSS">CSS</li>
-                      <li class="genres btn btn--plain" title="JavaScript">JavaScript</li>
-                      <li class="genres btn btn--plain" title="Azure">Azure</li>
-                      <li class="genres btn btn--plain" title="HTML">HTML</li>
+                    <ul class="tag-list">
+                        <li>[ C# ]</li>
+                        <li>[ CSS ]</li>
+                        <li>[ JavaScript ]</li>
+                        <li>[ Azure ]</li>
+                        <li>[ HTML ]</li>
                     </ul>
-                  </article>
+                </article>
 
-                  <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/RG_igra';" style="cursor: pointer;">
-                    <h3>CrimsonDawn <span class="project-year">2025</span></h3>
+                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/RG_igra';">
+                    <div class="card-bar">
+                        <span>~/projects/crimsondawn</span>
+                        <span class="project-year">[ 2025 ]</span>
+                    </div>
+                    <h3>CrimsonDawn</h3>
                     <p class="project-description" data-project="crimsondawn">Doom clone 3D game made in WebGPU with a three-man group for a university project.</p>
-                    <ul class="skills-list">
-                      <li class="genres btn btn--plain" title="WebGPU">WebGPU</li>
-                      <li class="genres btn btn--plain" title="JavaScript">JavaScript</li>
-                      <li class="genres btn btn--plain" title="Blender">Blender</li>
+                    <ul class="tag-list">
+                        <li>[ WebGPU ]</li>
+                        <li>[ JavaScript ]</li>
+                        <li>[ Blender ]</li>
                     </ul>
-                  </article>
+                </article>
 
-                  <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/GymChaos';" style="cursor: pointer;">
-                    <h3>GymChaos<span class="project-year">2026</span></h3>
+                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/GymChaos';">
+                    <div class="card-bar">
+                        <span>~/projects/gymchaos</span>
+                        <span class="project-year">[ 2026 ]</span>
+                    </div>
+                    <h3>GymChaos</h3>
                     <p class="project-description" data-project="gymchaos">Fitness arcade fighting 3D game made in Unity.</p>
-                    <ul class="skills-list">
-                      <li class="genres btn btn--plain" title="Unity">Unity</li>
-                      <li class="genres btn btn--plain" title="C#">C#</li>
-                      <li class="genres btn btn--plain" title="Blender">Blender</li>
+                    <ul class="tag-list">
+                        <li>[ Unity ]</li>
+                        <li>[ C# ]</li>
+                        <li>[ Blender ]</li>
                     </ul>
-                  </article>
+                </article>
 
-                  <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/FullScanSecurity';" style="cursor: pointer;">
-                    <h3>FullScanSecurity<span class="project-year">2026</span></h3>
+                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/FullScanSecurity';">
+                    <div class="card-bar">
+                        <span>~/projects/fullscansecurity</span>
+                        <span class="project-year">[ 2026 ]</span>
+                    </div>
+                    <h3>FullScanSecurity</h3>
                     <p class="project-description" data-project="fullscansecurity">Mobile security application made in Android Studio.</p>
-                    <ul class="skills-list">
-                      <li class="genres btn btn--plain" title="Android Studio">Android Studio</li>
-                      <li class="genres btn btn--plain" title="Java">Java</li>
+                    <ul class="tag-list">
+                        <li>[ Android Studio ]</li>
+                        <li>[ Java ]</li>
                     </ul>
-                  </article>
+                </article>
 
-                  <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/mdi_kranj';" style="cursor: pointer;">
-                    <h3>MDI Kranj - spletna stran<span class="project-year">2026</span></h3>
+                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/mdi_kranj';">
+                    <div class="card-bar">
+                        <span>~/projects/mdi-kranj</span>
+                        <span class="project-year">[ 2026 ]</span>
+                    </div>
+                    <h3>MDI Kranj — spletna stran</h3>
                     <p class="project-description" data-project="mdikranj">Website made for Medobčinsko društvo invalidov Kranj as a part of student work.</p>
-                    <ul class="skills-list">
-                      <li class="genres btn btn--plain" title="CSS">CSS</li>
-                      <li class="genres btn btn--plain" title="Javascript">JavaScript</li>
-                      <li class="genres btn btn--plain" title="Typescript">TypeScript</li>
-                      <li class="genres btn btn--plain" title="HTML">HTML</li>
+                    <ul class="tag-list">
+                        <li>[ CSS ]</li>
+                        <li>[ JavaScript ]</li>
+                        <li>[ TypeScript ]</li>
+                        <li>[ HTML ]</li>
                     </ul>
-                  </article>
-                </div>
+                </article>
 
-              </section>
-              
-              <h2>SKILLS</h2>
-              <section id="skills">
-                <ul id="skili">
-                  <li class="genres btn btn--plain">HTML</li>
-                  <li class="genres btn btn--plain">CSS</li>
-                  <li class="genres btn btn--plain">MySQL</li>
-                  <li class="genres btn btn--plain">C#</li>
-                  <li class="genres btn btn--plain">C</li>
-                  <li class="genres btn btn--plain">Java</li>
-                  <li class="genres btn btn--plain">JavaScript</li>
-                  <li class="genres btn btn--plain">Python</li>
-                  <li class="genres btn btn--plain">Unreal Engine</li>
-                  <li class="genres btn btn--plain">Unity</li>
-				          <li class="genres btn btn--plain">Ink</li>
-                  <li class="genres btn btn--plain">VS Code</li>
-                  <li class="genres btn btn--plain" title="Git, Github, Markdown">Github</li>
-                  <li class="genres btn btn--plain">Android Studio</li>
-                  <li class="genres btn btn--plain">Aseprite</li>
-                  <li class="genres btn btn--plain" title="Photoshop, After Effects, Premiere Pro, Illustrator">Adobe</li>
-                  <li class="genres btn btn--plain" title="Mint, Ubuntu">Linux</li>
-                  <li class="genres btn btn--plain">Windows</li>
-                  <li class="genres btn btn--plain">Blender</li>
-                </ul>
-              </section>
-              
-              <h2>CONTACT ME</h2>
-            <section id="contact">
-                <div class="contact-links">
-                    <p class="btn btn--outline">
-                        <a href="https://www.linkedin.com/in/luka-azman-0275a01b1/">LinkedIn</a>
-                    </p>
-                    <p id="mail" class="btn btn--outline">
-                        <a href="mailto:luka.azman9@gmail.com">Email me</a>
-                    </p>
-                    <p class="btn btn--outline">
-                        <a href="https://github.com/lukaazman">GitHub</a>
-                    </p>
-                </div>
-                </section>
-        </main>
-    </body>
-</html>
+            </div>
+        </section>
+
+        <section id="skills" class="page">
+            <div class="section-head">
+                <h2 id="skillsTitle">SKILLS</h2>
+                <span class="section-tag">A—Z</span>
+            </div>
+            <ul id="skillList" class="tag-list tag-list--big">
+                <li>[ HTML ]</li>
+                <li>[ CSS ]</li>
+                <li>[ MySQL ]</li>
+                <li>[ C# ]</li>
+                <li>[ C ]</li>
+                <li>[ Java ]</li>
+                <li>[ JavaScript ]</li>
+                <li>[ Python ]</li>
+                <li>[ Unreal Engine ]</li>
+                <li>[ Unity ]</li>
+                <li>[ Ink ]</li>
+                <li>[ VS Code ]</li>
+                <li title="Git, Github, Markdown">[ Github ]</li>
+                <li>[ Android Studio ]</li>
+                <li>[ Aseprite ]</li>
+                <li title="Photoshop, After Effects, Premiere Pro, Illustrator">[ Adobe ]</li>
+                <li title="Mint, Ubuntu">[ Linux ]</li>
+                <li>[ Windows ]</li>
+                <li>[ Blender ]</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="page">
+            <div class="section-head">
+                <h2 id="contactTitle">CONTACT ME</h2>
+                <span class="section-tag">CHANNELS</span>
+            </div>
+            <div class="contact-list">
+                <a class="contact-row" id="mail" href="mailto:luka.azman9@gmail.com">
+                    <span class="idx">01.</span> <span id="emailLabel">EMAIL ME</span> <span class="arrow">↗</span>
+                </a>
+                <a class="contact-row" href="https://www.linkedin.com/in/luka-azman-0275a01b1/">
+                    <span class="idx">02.</span> LINKEDIN <span class="arrow">↗</span>
+                </a>
+                <a class="contact-row" href="https://github.com/lukaazman">
+                    <span class="idx">03.</span> GITHUB <span class="arrow">↗</span>
+                </a>
+                <a class="contact-row" href="résumé.pdf">
+                    <span class="idx">04.</span> <span id="resumeLabel">RÉSUMÉ</span> <span class="arrow">↗</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 LUKA AŽMAN — SOFTWARE PROGRAMMER / GAME DEVELOPER
+    </footer>
+
 <!--
 ╭━━━━━━━━━━━━━╮
 ┃    ● ═══    ┃
@@ -186,3 +289,5 @@
 ┃      ○      ┃
 ╰━━━━━━━━━━━━━╯
 -->
+</body>
+</html>

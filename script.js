@@ -1,116 +1,152 @@
 const translations = {
-  english: {
-      projects: "Projects",
-      skills: "Skills",
-      resume: "Résumé",
-      contact: "Contact",
-      welcome: "Welcome to my Portfolio! My name is Luka Ažman and I am <br> a future <span class='job'>Software Programmer</span> and <span class='job'>Game Developer</span>.",
-      projectsTitle: "PROJECTS",
-      skillsTitle: "SKILLS",
-      contactTitle: "CONTACT ME",
-      backroomsDesc: "Horror 3D video game made in Unreal Engine with Visual Scripting for my highschool graduation project.",
-      pixeLifeDesc: "Pixel art walking simulator 2D video game made in Unity and Aseprite.",
-      simpleDesc: "Chrome Browser Extension made for simpler browsing using custom commands.",
-      upnoteDesc: "Minimalistic and slick Markdown file Text Editor.",
-      cinescoreDesc: "Movie review site, made in a two-man group for a university project.",
-      cdDesc: "Doom clone 3D game made in WebGPU with a three-man group for a university project.",
-      gcDesc: "Fitness arcade fighting 3D game made in Unity.",
-      fullscansecurityDesc: "Mobile security application made in Android Studio.",
-      mdikranjDesc: "Website made for Medobčinsko društvo invalidov Kranj as a part of student work.",
-      emailMe: "Email me",
-      colorScheme: {
-          primary: "#0052cc",
-          secondary: "#00d4ff",
-          text: "#1a1a1a",
-          background: "#f8f9fa",
-          accent: "#e74c3c"
-      }
-  },
-  slovenian: {
-      projects: "Projekti",
-      skills: "Veščine",
-      resume: "Življenjepis",
-      contact: "Kontakt",
-      welcome: "Dobrodošli v mojem portfelju! Moje ime je Luka Ažman in sem <br> bodoči <span class='job'>Programer programske opreme</span> in <span class='job'>Razvijalec iger</span>.",
-      projectsTitle: "PROJEKTI",
-      skillsTitle: "VEŠČINE",
-      contactTitle: "KONTAKTIRAJTE ME",
-      backroomsDesc: "Grozljiva 3D video igra, narejena v Unreal Engine z vizualnim skriptiranjem za moj maturitetni projekt.",
-      pixeLifeDesc: "Pixel art simulator hoje 2D video igra izdelana v Unity in Aseprite.",
-      simpleDesc: "Razširitev brskalnika Chrome za preprostejše brskanje z ukazi po meri.",
-      upnoteDesc: "Minimalističen in eleganten urejevalnik besedila datoteke Markdown.",
-      cinescoreDesc: "Spletna stran za ocenjevanje filmov, narejeno v dvo-osebni skupini za univerzitetni projekt.",
-      cdDesc: "Doom klon 3D igra narejena v WebGPU s tri-osebno skupino za univerzitetni projekt.",
-      gcDesc: "Fitnes arkadna borbena 3D igra narejena v Unity.",
-      fullscansecurityDesc: "Mobilna varnostna aplikacija narejena v Android Studiju.",
-      mdikranjDesc: "Spletna stran narejena za Medobčinsko društvo invalidov Kranj kot del študentskega dela.",
-      emailMe: "Pišite mi",
-      colorScheme: {
-          primary: "#0052cc",
-          secondary: "#00d4ff",
-          text: "#1a1a1a",
-          background: "#f8f9fa",
-          accent: "#e74c3c"
-      }
-  }
+    english: {
+        menu: { experience: "[ EXPERIENCE ]", projects: "[ PROJECTS ]", skills: "[ SKILLS ]", contact: "[ CONTACT ]", resume: "[ RÉSUMÉ ]" },
+        welcome: 'Welcome to my Portfolio! My name is Luka Ažman and I am <br> a future <span class="accent">Software Programmer</span> and <span class="accent">Game Developer</span>.',
+        cta: "> Explore Portfolio",
+        experienceTitle: "EXPERIENCE",
+        projectsTitle: "PROJECTS",
+        skillsTitle: "SKILLS",
+        contactTitle: "CONTACT ME",
+        emailLabel: "EMAIL ME",
+        resumeLabel: "RÉSUMÉ",
+        expFootnote: "Also completed seasonal part-time work in retail, hospitality, and logistics (2020–2025).",
+        expTypes: {
+            mdikranj: "[ STUDENT WORK ]",
+            iskraemeco: "[ INTERNSHIP ]"
+        },
+        expDescriptions: {
+            mdikranj: "Built the organization's website as part of student work for Medobčinsko društvo invalidov Kranj.",
+            iskraemeco: "IT department internship — maintained and edited company websites."
+        },
+        descriptions: {
+            backrooms: "Horror 3D video game made in Unreal Engine with Visual Scripting for my highschool graduation project.",
+            pixelife: "Pixel art walking simulator 2D video game made in Unity and Aseprite.",
+            simplesearch: "Chrome Browser Extension made for simpler browsing using custom commands.",
+            upnote: "Minimalistic and slick Markdown file Text Editor.",
+            cinescore: "Movie review site, made in a two-man group for a university project.",
+            crimsondawn: "Doom clone 3D game made in WebGPU with a three-man group for a university project.",
+            gymchaos: "Fitness arcade fighting 3D game made in Unity.",
+            fullscansecurity: "Mobile security application made in Android Studio.",
+            mdikranjProject: "Website made for Medobčinsko društvo invalidov Kranj as a part of student work."
+        }
+    },
+    slovenian: {
+        menu: { experience: "[ IZKUŠNJE ]", projects: "[ PROJEKTI ]", skills: "[ VEŠČINE ]", contact: "[ KONTAKT ]", resume: "[ ŽIVLJENJEPIS ]" },
+        welcome: 'Dobrodošli v mojem portfelju! Moje ime je Luka Ažman in sem <br> bodoči <span class="accent">Programer programske opreme</span> in <span class="accent">Razvijalec iger</span>.',
+        cta: "> Razišči portfolio",
+        experienceTitle: "IZKUŠNJE",
+        projectsTitle: "PROJEKTI",
+        skillsTitle: "VEŠČINE",
+        contactTitle: "KONTAKTIRAJTE ME",
+        emailLabel: "PIŠITE MI",
+        resumeLabel: "ŽIVLJENJEPIS",
+        expFootnote: "Opravljal tudi sezonska študentska dela v trgovini, gostinstvu in logistiki (2020–2025).",
+        expTypes: {
+            mdikranj: "[ ŠTUDENTSKO DELO ]",
+            iskraemeco: "[ PRAKSA ]"
+        },
+        expDescriptions: {
+            mdikranj: "Izdelava spletne strani kot del študentskega dela za Medobčinsko društvo invalidov Kranj.",
+            iskraemeco: "Delovna praksa v IT oddelku — urejanje in vzdrževanje spletnih strani podjetja."
+        },
+        descriptions: {
+            backrooms: "Grozljiva 3D video igra, narejena v Unreal Engine z vizualnim skriptiranjem za moj maturitetni projekt.",
+            pixelife: "Pixel art simulator hoje 2D video igra izdelana v Unity in Aseprite.",
+            simplesearch: "Razširitev brskalnika Chrome za preprostejše brskanje z ukazi po meri.",
+            upnote: "Minimalističen in eleganten urejevalnik besedila datoteke Markdown.",
+            cinescore: "Spletna stran za ocenjevanje filmov, narejeno v dvo-osebni skupini za univerzitetni projekt.",
+            crimsondawn: "Doom klon 3D igra narejena v WebGPU s tri-osebno skupino za univerzitetni projekt.",
+            gymchaos: "Fitnes arkadna borbena 3D igra narejena v Unity.",
+            fullscansecurity: "Mobilna varnostna aplikacija narejena v Android Studiju.",
+            mdikranjProject: "Spletna stran narejena za Medobčinsko društvo invalidov Kranj kot del študentskega dela."
+        }
+    }
 };
- 
+
 let currentLanguage = 'english';
 
+function applyTranslations() {
+    const t = translations[currentLanguage];
+
+    const menuLinks = document.querySelectorAll('#menu a');
+    menuLinks[0].textContent = t.menu.experience;
+    menuLinks[1].textContent = t.menu.projects;
+    menuLinks[2].textContent = t.menu.skills;
+    menuLinks[3].textContent = t.menu.contact;
+    menuLinks[4].textContent = t.menu.resume;
+
+    document.getElementById('welcomeText').innerHTML = t.welcome;
+    document.querySelector('.cta').textContent = t.cta;
+
+    document.getElementById('experienceTitle').textContent = t.experienceTitle;
+    document.getElementById('projectsTitle').textContent = t.projectsTitle;
+    document.getElementById('skillsTitle').textContent = t.skillsTitle;
+    document.getElementById('contactTitle').textContent = t.contactTitle;
+    document.getElementById('emailLabel').textContent = t.emailLabel;
+    document.getElementById('resumeLabel').textContent = t.resumeLabel;
+    document.getElementById('expFootnote').textContent = t.expFootnote;
+
+    Object.keys(t.expTypes).forEach((key) => {
+        const el = document.querySelector(`[data-exptype="${key}"]`);
+        if (el) el.textContent = t.expTypes[key];
+    });
+
+    Object.keys(t.expDescriptions).forEach((key) => {
+        const el = document.querySelector(`.exp-desc[data-exp="${key}"]`);
+        if (el) el.textContent = t.expDescriptions[key];
+    });
+
+    document.querySelector('[data-project="backrooms"]').textContent = t.descriptions.backrooms;
+    document.querySelector('[data-project="pixelife"]').textContent = t.descriptions.pixelife;
+    document.querySelector('[data-project="simplesearch"]').textContent = t.descriptions.simplesearch;
+    document.querySelector('[data-project="upnote"]').textContent = t.descriptions.upnote;
+    document.querySelector('[data-project="cinescore"]').textContent = t.descriptions.cinescore;
+    document.querySelector('[data-project="crimsondawn"]').textContent = t.descriptions.crimsondawn;
+    document.querySelector('[data-project="gymchaos"]').textContent = t.descriptions.gymchaos;
+    document.querySelector('[data-project="fullscansecurity"]').textContent = t.descriptions.fullscansecurity;
+    document.querySelector('[data-project="mdikranj"]').textContent = t.descriptions.mdikranjProject;
+}
+
 function toggleLanguage() {
-  currentLanguage = currentLanguage === 'english' ? 'slovenian' : 'english';
-  updateContent();
-  updateColorScheme();
+    currentLanguage = currentLanguage === 'english' ? 'slovenian' : 'english';
+    applyTranslations();
 }
 
-function updateContent() {
-  document.querySelector('nav a[href="#projects"]').textContent = translations[currentLanguage].projects;
-  document.querySelector('nav a[href="#skills"]').textContent = translations[currentLanguage].skills;
-  document.querySelector('nav a[href="résumé.pdf"]').textContent = translations[currentLanguage].resume;
-  document.querySelector('nav a[href="#contact"]').textContent = translations[currentLanguage].contact;
-
-  document.querySelector('#home p').innerHTML = translations[currentLanguage].welcome;
-
-  document.querySelector('#projekt').textContent = translations[currentLanguage].projectsTitle;
-  document.querySelector('h2:nth-of-type(2)').textContent = translations[currentLanguage].skillsTitle;
-  document.querySelector('h2:nth-of-type(3)').textContent = translations[currentLanguage].contactTitle;
-
-  document.querySelector('[data-project="backrooms"]').textContent = translations[currentLanguage].backroomsDesc;
-  document.querySelector('[data-project="pixelife"]').textContent = translations[currentLanguage].pixeLifeDesc;
-  document.querySelector('[data-project="simplesearch"]').textContent = translations[currentLanguage].simpleDesc;
-  document.querySelector('[data-project="upnote"]').textContent = translations[currentLanguage].upnoteDesc;
-  document.querySelector('[data-project="cinescore"]').textContent = translations[currentLanguage].cinescoreDesc;
-  document.querySelector('[data-project="crimsondawn"]').textContent = translations[currentLanguage].cdDesc;
-  document.querySelector('[data-project="gymchaos"]').textContent = translations[currentLanguage].gcDesc;
-  document.querySelector('[data-project="fullscansecurity"]').textContent = translations[currentLanguage].fullscansecurityDesc;
-  document.querySelector('[data-project="mdikranj"]').textContent = translations[currentLanguage].mdikranjDesc;
-
-  document.querySelector('#mail a').textContent = translations[currentLanguage].emailMe;
+function showSection(sectionId) {
+    document.querySelectorAll('.page').forEach((page) => {
+        page.classList.toggle('active', page.id === sectionId);
+    });
+    closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const heroBg = document.getElementById('heroBg');
+    heroBg.style.opacity = sectionId === 'home' ? '1' : '0.25';
 }
 
-function updateColorScheme() {
-  const colors = translations[currentLanguage].colorScheme;
-  document.documentElement.style.setProperty('--primary-color', colors.primary);
-  document.documentElement.style.setProperty('--secondary-color', colors.secondary);
-  document.documentElement.style.setProperty('--text-color', colors.text);
-  document.documentElement.style.setProperty('--background-color', colors.background);
-  document.documentElement.style.setProperty('--accent-color', colors.accent);
-  document.body.classList.add('theme-light');
-  document.body.classList.remove('theme-dark');
+function closeMenu() {
+    document.getElementById('menu').classList.add('menu-hidden');
+    document.getElementById('menuIcon').classList.remove('open');
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  // A-Z sorting
-  const skillsList = document.getElementById('skili');
-  const skills = Array.from(skillsList.getElementsByTagName('li'));
-  skills.sort((a, b) => a.textContent.localeCompare(b.textContent));
-  skillsList.innerHTML = '';
-  skills.forEach(skill => skillsList.appendChild(skill));
+document.addEventListener('DOMContentLoaded', () => {
+    const skillList = document.getElementById('skillList');
+    const skills = Array.from(skillList.getElementsByTagName('li'));
+    skills.sort((a, b) => a.textContent.localeCompare(b.textContent));
+    skillList.innerHTML = '';
+    skills.forEach((s) => skillList.appendChild(s));
 
-  const languageToggle = document.getElementById('ime');
-  if (languageToggle) {
-      languageToggle.addEventListener('click', toggleLanguage);
-  }
+    const menu = document.getElementById('menu');
+    const menuIcon = document.getElementById('menuIcon');
+    menuIcon.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menu.classList.toggle('menu-hidden');
+        menuIcon.classList.toggle('open');
+    });
 
-  updateColorScheme();
+    document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !menuIcon.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    document.getElementById('languageToggle').addEventListener('click', toggleLanguage);
 });
