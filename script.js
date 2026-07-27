@@ -102,8 +102,8 @@ function applyTranslations() {
     document.querySelector('[data-project="upnote"]').textContent = t.descriptions.upnote;
     document.querySelector('[data-project="cinescore"]').textContent = t.descriptions.cinescore;
     document.querySelector('[data-project="crimsondawn"]').textContent = t.descriptions.crimsondawn;
-    document.querySelector('[data-project="gymchaos"]').textContent = t.descriptions.gymchaos;
     document.querySelector('[data-project="fullscansecurity"]').textContent = t.descriptions.fullscansecurity;
+    document.querySelector('[data-project="gymchaos"]').textContent = t.descriptions.gymchaos;
     document.querySelector('[data-project="mdikranj"]').textContent = t.descriptions.mdikranjProject;
 }
 
