@@ -363,6 +363,10 @@ main {
     .projects-grid { grid-template-columns: 1fr; }
 }
 
+#exists {
+    cursor: pointer;
+}
+
 .project-card {
     background: var(--bg);
     padding: 1.5rem;
