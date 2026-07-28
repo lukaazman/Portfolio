@@ -127,7 +127,30 @@ function closeMenu() {
     document.getElementById('menuIcon').classList.remove('open');
 }
 
+function navigateToExternalCard(card) {
+    const url = card.dataset.url;
+    if (url) {
+        window.location.assign(url);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-section]').forEach((control) => {
+        control.addEventListener('click', (event) => {
+            event.preventDefault();
+            showSection(control.dataset.section);
+        });
+    });
+
+    document.querySelectorAll('.external-card').forEach((card) => {
+        card.addEventListener('click', () => navigateToExternalCard(card));
+        card.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                navigateToExternalCard(card);
+            }
+        });
+    });
     const skillList = document.getElementById('skillList');
     const skills = Array.from(skillList.getElementsByTagName('li'));
     skills.sort((a, b) => a.textContent.localeCompare(b.textContent));

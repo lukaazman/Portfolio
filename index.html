@@ -4,12 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Luka Ažman">
-    <link rel="icon" href="https://img.icons8.com/?size=100&id=r6Mbs3RSJtkn&format=png&color=FFFFFF" type="image/png">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'none'; media-src 'none'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <title>Luka Ažman | Portfolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700;900&family=Cutive+Mono&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -21,7 +19,7 @@
     </div>
 
     <header class="topbar">
-        <a href="#home" class="logo" onclick="event.preventDefault(); showSection('home')">LUKA AŽMAN</a>
+        <a href="#home" class="logo" data-section="home">LUKA AŽMAN</a>
         <div class="topbar-controls">
             <button id="languageToggle" class="icon-btn" title="Translate" aria-label="Translate">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
@@ -36,10 +34,10 @@
     </header>
 
     <nav id="menu" class="menu menu-hidden">
-        <a href="#experience" onclick="event.preventDefault(); showSection('experience')">[ EXPERIENCE ]</a>
-        <a href="#projects" onclick="event.preventDefault(); showSection('projects')">[ PROJECTS ]</a>
-        <a href="#skills" onclick="event.preventDefault(); showSection('skills')">[ SKILLS ]</a>
-        <a href="#contact" onclick="event.preventDefault(); showSection('contact')">[ CONTACT ]</a>
+        <a href="#experience" data-section="experience">[ EXPERIENCE ]</a>
+        <a href="#projects" data-section="projects">[ PROJECTS ]</a>
+        <a href="#skills" data-section="skills">[ SKILLS ]</a>
+        <a href="#contact" data-section="contact">[ CONTACT ]</a>
         <a href="résumé.pdf" id="resumeLink">[ RÉSUMÉ ]</a>
     </nav>
 
@@ -50,7 +48,7 @@
                     Welcome to my Portfolio! My name is Luka Ažman and I am <br>
                     a future <span class="accent">Software Programmer</span> and <span class="accent">Game Developer</span>.
                 </p>
-                <button class="cta" onclick="showSection('experience')">&gt; Explore Portfolio</button>
+                <button class="cta" data-section="experience">&gt; Explore Portfolio</button>
             </div>
         </section>
 
@@ -61,7 +59,7 @@
             </div>
 
             <div class="experience-list">
-                <article class="experience-entry" id="exists" onclick="window.location.href='https://mdikranj.si';">
+                <article class="experience-entry external-card" id="exists" data-url="https://mdikranj.si" tabindex="0" role="link">
                     <div class="exp-meta">
                         <span class="exp-date">JUN – JUL 2026</span>
                         <span class="exp-type" data-exptype="mdikranj">[ STUDENT WORK ]</span>
@@ -91,7 +89,7 @@
 
             <div class="projects-grid">
 
-                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/Backrooms';">
+                <article class="project-card external-card" data-url="https://github.com/lukaazman/Backrooms" tabindex="0" role="link">
                     <div class="card-bar">
                         <span>~/projects/backrooms</span>
                         <span class="project-year">[ 2022-2023 ]</span>
@@ -104,7 +102,7 @@
                     </ul>
                 </article>
 
-                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/PixeLife';">
+                <article class="project-card external-card" data-url="https://github.com/lukaazman/PixeLife" tabindex="0" role="link">
                     <div class="card-bar">
                         <span>~/projects/pixelife</span>
                         <span class="project-year">[ 2024 ]</span>
@@ -119,7 +117,7 @@
                     </ul>
                 </article>
 
-                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/SimpleSearch';">
+                <article class="project-card external-card" data-url="https://github.com/lukaazman/SimpleSearch" tabindex="0" role="link">
                     <div class="card-bar">
                         <span>~/projects/simplesearch</span>
                         <span class="project-year">[ 2024 ]</span>
@@ -133,7 +131,7 @@
                     </ul>
                 </article>
 
-                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/UpNote';">
+                <article class="project-card external-card" data-url="https://github.com/lukaazman/UpNote" tabindex="0" role="link">
                     <div class="card-bar">
                         <span>~/projects/upnote</span>
                         <span class="project-year">[ 2025 ]</span>
@@ -147,7 +145,7 @@
                     </ul>
                 </article>
 
-                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/CineScore';">
+                <article class="project-card external-card" data-url="https://github.com/lukaazman/CineScore" tabindex="0" role="link">
                     <div class="card-bar">
                         <span>~/projects/cinescore</span>
                         <span class="project-year">[ 2025 ]</span>
@@ -162,7 +160,7 @@
                     </ul>
                 </article>
 
-                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/RG_igra';">
+                <article class="project-card external-card" data-url="https://github.com/lukaazman/RG_igra" tabindex="0" role="link">
                     <div class="card-bar">
                         <span>~/projects/crimsondawn</span>
                         <span class="project-year">[ 2025 ]</span>
@@ -176,7 +174,7 @@
                     </ul>
                 </article>
 
-                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/FullScanSecurity';">
+                <article class="project-card external-card" data-url="https://github.com/lukaazman/FullScanSecurity" tabindex="0" role="link">
                     <div class="card-bar">
                         <span>~/projects/fullscansecurity</span>
                         <span class="project-year">[ 2026 ]</span>
@@ -189,7 +187,7 @@
                     </ul>
                 </article>
                 
-                <article class="project-card" onclick="window.location.href='https://github.com/lukaazman/GymChaos';">
+                <article class="project-card external-card" data-url="https://github.com/lukaazman/GymChaos" tabindex="0" role="link">
                     <div class="card-bar">
                         <span>~/projects/gymchaos</span>
                         <span class="project-year">[ 2026 ]</span>
@@ -203,7 +201,7 @@
                     </ul>
                 </article>
 
-                <article class="project-card" onclick="window.location.href='https://mdikranj.si';">
+                <article class="project-card external-card" data-url="https://mdikranj.si" tabindex="0" role="link">
                     <div class="card-bar">
                         <span>~/projects/mdi-kranj</span>
                         <span class="project-year">[ 2026 ]</span>

@@ -8,8 +8,8 @@
     --text-dim: rgba(229, 226, 225, 0.55);
     --accent: #3c78d6;
 
-    --font-mono: 'Roboto Mono', monospace;
-    --font-body: 'Cutive Mono', 'Roboto Mono', monospace;
+    --font-mono: ui-monospace, 'Cascadia Code', 'SFMono-Regular', Consolas, monospace;
+    --font-body: ui-monospace, 'Cascadia Code', 'SFMono-Regular', Consolas, monospace;
 }
 
 * {
@@ -382,6 +382,14 @@ main {
     transform: translateY(-4px);
 }
 
+
+.external-card:focus-visible,
+.icon-btn:focus-visible,
+.cta:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
 .card-bar {
     display: flex;
     justify-content: space-between;
