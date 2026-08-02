@@ -1,7 +1,7 @@
 const translations = {
     english: {
         menu: { experience: "[ EXPERIENCE ]", projects: "[ PROJECTS ]", skills: "[ SKILLS ]", contact: "[ CONTACT ]", resume: "[ RÉSUMÉ ]" },
-        welcome: 'Welcome to my Portfolio! My name is Luka Ažman and I am <br> a future <span class="accent">Software Programmer</span> and <span class="accent">Game Developer</span>.',
+        welcome: 'Welcome to my Portfolio! My name is Luka Ažman and I am <br> a <span class="accent">Software Programmer</span> and <span class="accent">Game Developer</span>.',
         cta: "> Explore Portfolio",
         experienceTitle: "EXPERIENCE",
         projectsTitle: "PROJECTS",
@@ -16,7 +16,7 @@ const translations = {
         },
         expDescriptions: {
             mdikranj: "Built the organization's website as part of student work for Medobčinsko društvo invalidov Kranj.",
-            iskraemeco: "IT department internship — maintained and edited company websites."
+            iskraemeco: "IT Department Intern — IT maintenance and company website management."
         },
         descriptions: {
             backrooms: "Horror 3D video game made in Unreal Engine with Visual Scripting for my highschool graduation project.",
@@ -32,7 +32,7 @@ const translations = {
     },
     slovenian: {
         menu: { experience: "[ IZKUŠNJE ]", projects: "[ PROJEKTI ]", skills: "[ VEŠČINE ]", contact: "[ KONTAKT ]", resume: "[ ŽIVLJENJEPIS ]" },
-        welcome: 'Dobrodošli v mojem portfelju! Moje ime je Luka Ažman in sem <br> bodoči <span class="accent">Programer programske opreme</span> in <span class="accent">Razvijalec iger</span>.',
+        welcome: 'Dobrodošli v mojem portfelju! Moje ime je Luka Ažman in sem <br> <span class="accent">Programer programske opreme</span> in <span class="accent">Razvijalec iger</span>.',
         cta: "> Razišči portfolio",
         experienceTitle: "IZKUŠNJE",
         projectsTitle: "PROJEKTI",
@@ -47,7 +47,7 @@ const translations = {
         },
         expDescriptions: {
             mdikranj: "Izdelava spletne strani kot del študentskega dela za Medobčinsko društvo invalidov Kranj.",
-            iskraemeco: "Delovna praksa v IT oddelku — urejanje in vzdrževanje spletnih strani podjetja."
+            iskraemeco: "Delovna praksa v IT oddelku — vzdrževanje IT-sistemov in upravljanje spletne strani podjetja."
         },
         descriptions: {
             backrooms: "Grozljiva 3D video igra, narejena v Unreal Engine z vizualnim skriptiranjem za moj maturitetni projekt.",
