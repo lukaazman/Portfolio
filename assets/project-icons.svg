@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 160 128">
+  <defs>
+    <symbol id="folder-shell" viewBox="0 0 160 128">
+      <path d="M12 36c0-8 6-14 14-14h36l15 14h51c11 0 20 9 20 20v34c0 11-9 20-20 20H32c-11 0-20-9-20-20z" fill="currentColor" opacity=".16" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M12 51h136v39c0 9-7 16-16 16H28c-9 0-16-7-16-16z" fill="currentColor" opacity=".48"/>
+      <path d="M13 51h134" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".82"/>
+    </symbol>
+  </defs>
+
+  <symbol id="folder-all" viewBox="0 0 160 128">
+    <use href="#folder-shell"/>
+    <rect x="56" y="65" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="3"/>
+    <rect x="77" y="65" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="3"/>
+    <rect x="98" y="65" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="3"/>
+  </symbol>
+
+  <symbol id="folder-game" viewBox="0 0 160 128">
+    <use href="#folder-shell"/>
+    <path d="M52 78c2-11 8-17 16-17h24c8 0 14 6 16 17l2 8c1 5-4 8-8 5l-11-8H69l-11 8c-4 3-9 0-8-5z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M65 68v13M59 74h12M92 71h1M100 78h1" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="folder-mobile" viewBox="0 0 160 128">
+    <use href="#folder-shell"/>
+    <rect x="68" y="60" width="24" height="38" rx="5" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M74 67h12M77 91h6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="folder-ai" viewBox="0 0 160 128">
+    <use href="#folder-shell"/>
+    <circle cx="61" cy="77" r="6" fill="none" stroke="currentColor" stroke-width="3"/>
+    <circle cx="99" cy="68" r="6" fill="none" stroke="currentColor" stroke-width="3"/>
+    <circle cx="99" cy="87" r="6" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M67 75 93 69M67 79l26 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="folder-web" viewBox="0 0 160 128">
+    <use href="#folder-shell"/>
+    <rect x="52" y="61" width="56" height="35" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M53 71h54M61 66h1M68 66h1M75 66h1M64 80h30M64 87h20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="folder-tools" viewBox="0 0 160 128">
+    <use href="#folder-shell"/>
+    <path d="m60 67 10 10-16 16-10-10zM91 61c6 0 11 5 11 11 0 2-1 4-2 6l-9-9-5 5 9 9c-2 1-4 2-6 2-6 0-11-5-11-11 0-7 6-13 13-13z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m54 91-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+</svg>

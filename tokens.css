@@ -1,0 +1,106 @@
+:root {
+    /* Cobalt discipline, translated to the dark Mac shell requested for this portfolio. */
+    --color-paper: oklch(92% 0.008 255);
+    --color-canvas: oklch(13% 0.014 255);
+    --color-canvas-deep: oklch(8.5% 0.012 255);
+    --color-canvas-alt: oklch(16% 0.014 255);
+    --color-wallpaper: oklch(9.5% 0.018 255);
+    --color-wallpaper-edge: oklch(7% 0.014 255);
+    --color-wallpaper-line: oklch(33% 0.028 255 / 0.42);
+    --color-wallpaper-mark: oklch(43% 0.045 252 / 0.22);
+    --color-surface: oklch(17% 0.016 255);
+    --color-surface-raised: oklch(21% 0.017 255);
+    --color-surface-hover: oklch(25% 0.019 255);
+    --color-surface-solid: oklch(13% 0.015 255);
+    --color-window: oklch(16% 0.015 255);
+    --color-window-bar: oklch(20% 0.017 255);
+    --color-icon-surface: oklch(18% 0.018 255);
+    --color-dock: oklch(19% 0.017 255);
+    --color-finder-sidebar: oklch(12% 0.014 255);
+    --color-rail: oklch(10% 0.013 255);
+
+    --color-ink: oklch(95% 0.008 255);
+    --color-ink-soft: oklch(82% 0.012 255);
+    --color-muted: oklch(65% 0.014 255);
+    --color-rule: oklch(100% 0.006 255 / 0.15);
+    --color-rule-strong: oklch(100% 0.006 255 / 0.28);
+    --color-glass-border: var(--color-rule-strong);
+    --color-grid: oklch(100% 0.006 255 / 0.05);
+
+    --color-accent: oklch(65% 0.15 252);
+    --color-accent-strong: oklch(79% 0.12 247);
+    --color-accent-deep: oklch(55% 0.14 252 / 0.24);
+    --color-accent-ink: oklch(97% 0.006 255);
+    --color-selected: oklch(65% 0.12 252 / 0.16);
+    --color-accent-ink-rule: oklch(9% 0.018 245 / 0.35);
+    --color-accent-ink-wash: oklch(9% 0.018 245 / 0.16);
+
+    --color-amber: oklch(81% 0.11 82);
+    --color-amber-ink: oklch(22% 0.028 82);
+    --color-success: oklch(76% 0.11 155);
+    --color-error: oklch(72% 0.13 28);
+    --color-traffic-close: oklch(69% 0.18 28);
+    --color-traffic-minimize: oklch(84% 0.16 86);
+    --color-traffic-maximize: oklch(72% 0.15 146);
+    --color-status-ring: oklch(76% 0.11 155 / 0.2);
+    --color-backdrop: oklch(5% 0.012 255 / 0.74);
+    --color-traffic-border: oklch(9% 0.018 245 / 0.32);
+    --color-window-home-start: var(--color-window);
+
+    /* Category signals stay related, so the project index does not become a rainbow. */
+    --color-folder-all: var(--color-accent-strong);
+    --color-folder-game: oklch(78% 0.09 70);
+    --color-folder-mobile: oklch(76% 0.08 175);
+    --color-folder-ai: oklch(76% 0.08 285);
+    --color-folder-web: oklch(78% 0.075 215);
+    --color-folder-tools: oklch(80% 0.08 95);
+    --color-suite-surface: oklch(11% 0.014 255);
+
+    --font-ui: "SF Pro Text", "Avenir Next", "Segoe UI", sans-serif;
+    --font-display: "SF Pro Display", "Avenir Next", "Segoe UI", sans-serif;
+    --font-body: var(--font-ui);
+    --font-mono: "SF Mono", "Cascadia Code", ui-monospace, monospace;
+
+    --space-3xs: 0.125rem;
+    --space-2xs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2.5rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+
+    --text-xs: 0.68rem;
+    --text-sm: 0.8rem;
+    --text-md: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: clamp(1.7rem, 2vw + 1rem, 3rem);
+
+    --radius-control: 0.45rem;
+    --radius-card: 0.7rem;
+    --radius-window: 0.72rem;
+    --radius-pill: 999px;
+
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --dur-micro: 120ms;
+    --dur-short: 220ms;
+    --dur-long: 420ms;
+
+    --shadow-whisper: 0 1px 2px oklch(5% 0.012 255 / 0.34);
+    --shadow-window: 0 1rem 2rem oklch(5% 0.012 255 / 0.34);
+    --shadow-panel: 0 0.75rem 1.6rem oklch(5% 0.012 255 / 0.28);
+    --shadow-dock: 0 0.6rem 1.2rem oklch(5% 0.012 255 / 0.32);
+    --shadow-icon: 0 0.35rem 0.75rem oklch(5% 0.012 255 / 0.22);
+    --shadow-status-ring: 0 0 0 0.22rem var(--color-status-ring);
+
+    --z-base: 1;
+    --z-window: 20;
+    --z-panel: 60;
+    --z-menu: 70;
+    --z-sticky: 80;
+    --z-dialog: 90;
+    --z-lock: 100;
+}

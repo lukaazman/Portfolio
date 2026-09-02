@@ -1,0 +1,60 @@
+[
+  {
+    "date": "2026-08-23",
+    "macrostructure": "Workbench",
+    "theme": "Cobalt-dark Mac shell / scenic mountain wallpaper / white system type",
+    "enrichment": "Tier C generated still, used as a local lock-screen wallpaper",
+    "brief": "Refine the lock screen into a scenic Mac login scene with a large date/time, lower-centered profile, and real social redirects instead of password UI",
+    "scope": "lock screen component"
+  },
+  {
+    "date": "2026-08-23",
+    "macrostructure": "Workbench",
+    "theme": "Cobalt-dark Mac shell / SF Pro UI + SF Mono files / single muted cobalt signal",
+    "enrichment": "hand-built local dark wallpaper + repository imagery",
+    "brief": "Hallmark anti-slop redesign: remove heavy glows, gradients and color noise, make Finder default to icon-and-name items, and preserve the Mac dock and responsive desktop shell",
+    "scope": "full portfolio",
+    "critique": "P5 H4 E4 S5 R4 V5",
+    "qa": "source and runtime pass"
+  },
+  {
+    "date": "2026-08-22",
+    "macrostructure": "Index-First",
+    "theme": "strict black macOS desktop / Inter UI + JetBrains Mono files / electric blue state",
+    "enrichment": "KernelOS-inspired translucent windows + hand-built monoline system chrome + local repository imagery + responsive app windows",
+    "brief": "Merge the current interactive desktop with the supplied Stitch macOS reference: lock screen, Workstation rail, Finder projects, README.md and Skills.json windows, pill dock, Spotlight, Control Center and keyboard/touch fallback",
+    "scope": "full portfolio"
+  },
+  {
+    "date": "2026-08-21",
+    "macrostructure": "roomy folder index + project catalogue window",
+    "theme": "existing portfolio dark / electric blue",
+    "enrichment": "hand-built semantic SVG folder icons + repository imagery",
+    "brief": "Remake Projects as a responsive desktop-CV explorer with larger folder sections, readable project details and accessible window navigation",
+    "scope": "projects section"
+  },
+  {
+    "date": "2026-08-21",
+    "macrostructure": "desktop folder field + single folder window",
+    "theme": "existing portfolio dark / electric blue",
+    "enrichment": "repository imagery + source-faithful gameplay and analog-horror treatments + synchronized companion suite bezels + edited PSD source art",
+    "brief": "Refine icon framing: enhance the actual GymChaos capture, clarify Backrooms analog horror, synchronize FullScanSecurity and TabTensor with one shared bezel, fit the full CrimsonDawn mark and remove SimpleSearch input text",
+    "scope": "projects icons"
+  },
+  {
+    "date": "2026-08-20",
+    "macrostructure": "desktop folder field + single folder window",
+    "theme": "existing portfolio dark / electric blue",
+    "enrichment": "Tier-B hand-built SVG app icons + repository assets",
+    "brief": "Minimal fake desktop Projects view with folder-only start state and icon-only project window",
+    "scope": "projects section"
+  },
+  {
+    "date": "2026-08-20",
+    "macrostructure": "folder index + project catalogue",
+    "theme": "existing portfolio dark / electric blue",
+    "enrichment": "Tier-B hand-built SVG project art",
+    "brief": "Minimal desktop-style Projects explorer with category folders, project thumbnails and repository links",
+    "scope": "projects section"
+  }
+]

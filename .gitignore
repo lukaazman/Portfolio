@@ -1,2 +1,4 @@
 #Unused files
 *.docx
+!résumé.pdf
+*.pdf

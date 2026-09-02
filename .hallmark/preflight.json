@@ -1,0 +1,11 @@
+{
+  "skill": "hallmark",
+  "version": "1.1.0",
+  "date": "2026-08-20",
+  "framework": "vanilla HTML/CSS/JS",
+  "fontStack": "ui-monospace / Cascadia Code / SFMono-Regular / Consolas",
+  "palette": "existing dark charcoal, warm white and electric blue",
+  "motion": "CSS transitions and page/fade keyframes; no motion library",
+  "spacing": "existing rem scale with semantic additions in tokens.css",
+  "preserve": ["existing route-like section navigation", "language toggle", "portfolio palette", "responsive behavior"]
+}
