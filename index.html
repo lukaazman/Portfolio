@@ -38,7 +38,7 @@
         <a href="#projects" data-section="projects">[ PROJECTS ]</a>
         <a href="#skills" data-section="skills">[ SKILLS ]</a>
         <a href="#contact" data-section="contact">[ CONTACT ]</a>
-        <a href="résumé.pdf" id="resumeLink">[ RÉSUMÉ ]</a>
+        <a href="résumé.pdf_eng" id="resumeLink" data-resume-link>[ RÉSUMÉ ]</a>
     </nav>
 
     <main>
@@ -84,169 +84,48 @@
         <section id="projects" class="page">
             <div class="section-head">
                 <h2 id="projectsTitle">PROJECTS</h2>
-                <span class="section-tag">SORT: CHRONOLOGICAL</span>
             </div>
 
-            <div class="projects-grid">
-
-                <article class="project-card external-card" data-url="https://github.com/lukaazman/Backrooms" tabindex="0" role="link">
-                    <div class="card-bar">
-                        <span>~/projects/backrooms</span>
-                        <span class="project-year">[ 2022-2023 ]</span>
+            <div class="project-finder" id="projectFinder">
+                <aside class="project-sidebar" id="projectSidebar" aria-label="Project folders">
+                    <p class="project-sidebar-label" id="projectFavoritesLabel">FAVORITES</p>
+                    <div id="projectFavorites"></div>
+                    <p class="project-sidebar-label" id="projectCollectionsLabel">COLLECTIONS</p>
+                    <div id="projectCategories"></div>
+                </aside>
+                <div class="project-browser-content">
+                    <div class="project-toolbar">
+                        <div class="project-location">
+                            <span class="project-location-dot" aria-hidden="true"></span>
+                            <span id="projectPath">~/projects</span>
+                        </div>
+                        <div class="project-view-controls" id="projectViewGroup" role="group" aria-label="Project view">
+                            <button class="project-view-button is-selected" type="button" data-project-view="icons" aria-label="Icon view" title="Icon view" aria-pressed="true">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+                            </button>
+                            <button class="project-view-button" type="button" data-project-view="list" aria-label="List view" title="List view" aria-pressed="false">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6h13M7 12h13M7 18h13"/><circle cx="4" cy="6" r=".8"/><circle cx="4" cy="12" r=".8"/><circle cx="4" cy="18" r=".8"/></svg>
+                            </button>
+                            <button class="project-view-button" type="button" data-project-view="columns" aria-label="Column view" title="Column view" aria-pressed="false">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="4" height="16" rx=".8"/><rect x="10" y="4" width="4" height="16" rx=".8"/><rect x="16" y="4" width="4" height="16" rx=".8"/></svg>
+                            </button>
+                        </div>
                     </div>
-                    <h3>Backrooms</h3>
-                    <p class="project-description" data-project="backrooms">Horror 3D video game made in Unreal Engine with Visual Scripting for my highschool graduation project.</p>
-                    <ul class="tag-list">
-                        <li>[ Unreal Engine ]</li>
-                        <li>[ Blueprints ]</li>
-                    </ul>
-                </article>
-
-                <article class="project-card external-card" data-url="https://github.com/lukaazman/PixeLife" tabindex="0" role="link">
-                    <div class="card-bar">
-                        <span>~/projects/pixelife</span>
-                        <span class="project-year">[ 2024 ]</span>
+                    <div class="project-browser-heading">
+                        <div>
+                            <h3 id="projectHeading">All Projects</h3>
+                        </div>
                     </div>
-                    <h3>PixeLife</h3>
-                    <p class="project-description" data-project="pixelife">Pixel art walking simulator 2D video game made in Unity and Aseprite.</p>
-                    <ul class="tag-list">
-                        <li>[ Unity ]</li>
-                        <li>[ C# ]</li>
-                        <li>[ Aseprite ]</li>
-                        <li>[ Ink ]</li>
-                    </ul>
-                </article>
-
-                <article class="project-card external-card" data-url="https://github.com/lukaazman/SimpleSearch" tabindex="0" role="link">
-                    <div class="card-bar">
-                        <span>~/projects/simplesearch</span>
-                        <span class="project-year">[ 2024 ]</span>
-                    </div>
-                    <h3>SimpleSearch</h3>
-                    <p class="project-description" data-project="simplesearch">Chrome Browser Extension made for simpler browsing using custom commands.</p>
-                    <ul class="tag-list">
-                        <li>[ JavaScript ]</li>
-                        <li>[ HTML ]</li>
-                        <li>[ CSS ]</li>
-                    </ul>
-                </article>
-
-                <article class="project-card external-card" data-url="https://github.com/lukaazman/UpNote" tabindex="0" role="link">
-                    <div class="card-bar">
-                        <span>~/projects/upnote</span>
-                        <span class="project-year">[ 2025 ]</span>
-                    </div>
-                    <h3>UpNote</h3>
-                    <p class="project-description" data-project="upnote">Minimalistic and slick Markdown file Text Editor.</p>
-                    <ul class="tag-list">
-                        <li>[ Python ]</li>
-                        <li>[ CSS ]</li>
-                        <li>[ HTML ]</li>
-                    </ul>
-                </article>
-
-                <article class="project-card external-card" data-url="https://github.com/lukaazman/CineScore" tabindex="0" role="link">
-                    <div class="card-bar">
-                        <span>~/projects/cinescore</span>
-                        <span class="project-year">[ 2025 ]</span>
-                    </div>
-                    <h3>CineScore</h3>
-                    <p class="project-description" data-project="cinescore">Movie review site, made in a two-man group for a university project.</p>
-                    <ul class="tag-list">
-                        <li>[ .NET ]</li>
-                        <li>[ C# ]</li>
-                        <li>[ JavaScript ]</li>
-                        <li>[ Azure ]</li>
-                    </ul>
-                </article>
-
-                <article class="project-card external-card" data-url="https://github.com/lukaazman/RG_igra" tabindex="0" role="link">
-                    <div class="card-bar">
-                        <span>~/projects/crimsondawn</span>
-                        <span class="project-year">[ 2025 ]</span>
-                    </div>
-                    <h3>CrimsonDawn</h3>
-                    <p class="project-description" data-project="crimsondawn">Doom clone 3D game made in WebGPU with a three-man group for a university project.</p>
-                    <ul class="tag-list">
-                        <li>[ WebGPU ]</li>
-                        <li>[ JavaScript ]</li>
-                        <li>[ Blender ]</li>
-                    </ul>
-                </article>
-
-                <article class="project-card external-card" data-url="https://github.com/lukaazman/FullScanSecurity" tabindex="0" role="link">
-                    <div class="card-bar">
-                        <span>~/projects/fullscansecurity</span>
-                        <span class="project-year">[ 2026 ]</span>
-                    </div>
-                    <h3>FullScanSecurity</h3>
-                    <p class="project-description" data-project="fullscansecurity">Mobile security application made in Android Studio.</p>
-                    <ul class="tag-list">
-                        <li>[ Android Studio ]</li>
-                        <li>[ Java ]</li>
-                    </ul>
-                </article>
-                
-                <article class="project-card external-card" data-url="https://github.com/lukaazman/GymChaos" tabindex="0" role="link">
-                    <div class="card-bar">
-                        <span>~/projects/gymchaos</span>
-                        <span class="project-year">[ 2026 ]</span>
-                    </div>
-                    <h3>GymChaos</h3>
-                    <p class="project-description" data-project="gymchaos">Fitness arcade fighting 3D game made in Unity.</p>
-                    <ul class="tag-list">
-                        <li>[ Unity ]</li>
-                        <li>[ C# ]</li>
-                        <li>[ Blender ]</li>
-                    </ul>
-                </article>
-
-                <article class="project-card external-card" data-url="https://mdikranj.si" tabindex="0" role="link">
-                    <div class="card-bar">
-                        <span>~/projects/mdi-kranj</span>
-                        <span class="project-year">[ 2026 ]</span>
-                    </div>
-                    <h3>MDI Kranj</h3>
-                    <p class="project-description" data-project="mdikranj">Website made for Medobčinsko društvo invalidov Kranj as a part of student work.</p>
-                    <ul class="tag-list">
-                        <li>[ JavaScript ]</li>
-                        <li>[ TypeScript ]</li>
-                        <li>[ Cloudfare ]</li>
-                        <li>[ Decap CMS ]</li>
-                    </ul>
-                </article>
-
+                    <div class="project-items" id="projectGrid" data-view="icons" role="group" aria-label="Projects"></div>
+                    <div class="project-status"><span id="projectStatus">11 items</span></div>
+                </div>
             </div>
         </section>
-
         <section id="skills" class="page">
             <div class="section-head">
                 <h2 id="skillsTitle">SKILLS</h2>
-                <span class="section-tag">A—Z</span>
             </div>
-            <ul id="skillList" class="tag-list tag-list--big">
-                <li>[ HTML ]</li>
-                <li>[ CSS ]</li>
-                <li>[ SQL ]</li>
-                <li>[ C# ]</li>
-                <li>[ C ]</li>
-                <li>[ Java ]</li>
-                <li>[ JavaScript ]</li>
-                <li>[ Python ]</li>
-                <li>[ Unreal Engine ]</li>
-                <li>[ Unity ]</li>
-                <li>[ Ink ]</li>
-                <li>[ VS Code ]</li>
-                <li title="Git, Github, Markdown">[ Github ]</li>
-                <li>[ Cloudfare ]</li>
-                <li>[ Decap CMS ]</li>
-                <li>[ Android Studio ]</li>
-                <li>[ Aseprite ]</li>
-                <li title="Photoshop, After Effects, Premiere Pro, Illustrator">[ Adobe ]</li>
-                <li title="Mint, Ubuntu, Fedora, Arch">[ Linux ]</li>
-                <li>[ Windows ]</li>
-                <li>[ Blender ]</li>
-            </ul>
+            <div id="skillsGrid" class="skills-grid" aria-label="Skill groups"></div>
         </section>
 
         <section id="contact" class="page">
@@ -264,7 +143,7 @@
                 <a class="contact-row" href="https://github.com/lukaazman">
                     <span class="idx">03.</span> GITHUB <span class="arrow">↗</span>
                 </a>
-                <a class="contact-row" href="résumé.pdf">
+                <a class="contact-row" href="résumé.pdf_eng" data-resume-link>
                     <span class="idx">04.</span> <span id="resumeLabel">RÉSUMÉ</span> <span class="arrow">↗</span>
                 </a>
             </div>
