@@ -1,173 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Luka Ažman">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'none'; media-src 'none'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+    <title>Luka Ažman | Software programmer and game developer</title>
+    <meta name="description" content="Portfolio of Luka Ažman, software programmer and game developer from Slovenia: games in Unity, Unreal and WebGPU, mobile apps, websites and tools.">
+    <link rel="canonical" href="https://lukaazman.dev/">
+    <link rel="alternate" hreflang="en" href="https://lukaazman.dev/">
+    <link rel="alternate" hreflang="sl" href="https://lukaazman.dev/?lang=sl">
+    <link rel="alternate" hreflang="x-default" href="https://lukaazman.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Luka Ažman | Software programmer and game developer">
+    <meta property="og:description" content="Games in Unity, Unreal and WebGPU, mobile apps, websites and tools, drawn up as a chalkboard.">
+    <meta property="og:url" content="https://lukaazman.dev/">
+    <meta property="og:image" content="https://lukaazman.dev/assets/og/home.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Luka Ažman","url":"https://lukaazman.dev/","jobTitle":"Software programmer and game developer","sameAs":["https://github.com/lukaazman","https://www.linkedin.com/in/luka-azman-0275a01b1/"],"knowsAbout":["Game development","Unity","C#","JavaScript","TypeScript","Python","Android"]}</script>
     <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
     <link rel="icon" href="assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-    <title>Luka Ažman | Portfolio</title>
-
+    <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="tokens.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="js/flag.js"></script>
+    <script src="vendor/gsap/gsap.min.js" defer></script>
+    <script src="vendor/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="vendor/gsap/SplitText.min.js" defer></script>
+    <script src="js/i18n.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/motion.js" type="module"></script>
 </head>
 <body>
+    <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-    <div class="hero-name-bg" id="heroBg" aria-hidden="true">
-        <span>LUKA<br>AŽMAN</span>
-    </div>
+    <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <filter id="chalk" x="-3%" y="-3%" width="106%" height="106%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4"/>
+        </filter>
+    </svg>
 
-    <header class="topbar">
-        <a href="#home" class="logo" data-section="home">LUKA AŽMAN</a>
-        <div class="topbar-controls">
-            <button id="languageToggle" class="icon-btn" title="Translate" aria-label="Translate">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M2 12h20M12 2c2.8 3 4.2 6.4 4.2 10s-1.4 7-4.2 10c-2.8-3-4.2-6.4-4.2-10S9.2 5 12 2z"/>
-                </svg>
-            </button>
-            <button id="menuIcon" class="icon-btn menu-icon" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
+    <header class="bar">
+        <a class="wordmark" href="#top">Luka Ažman</a>
+        <nav class="nav" id="nav" aria-label="Main" data-i18n-aria="nav.label">
+            <a href="#work" data-i18n="nav.work">Games</a>
+            <a href="#archive" data-i18n="nav.archive">Archive</a>
+            <a href="#experience" data-i18n="nav.experience">Experience</a>
+            <a href="#skills" data-i18n="nav.skills">Skills</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <span class="sr" id="langStatus" role="status"></span>
+        <button class="bar-button" id="langToggle" type="button" lang="sl" data-lang-toggle>Slovensko</button>
+        <button class="bar-button bar-menu" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menu</button>
     </header>
 
-    <nav id="menu" class="menu menu-hidden">
-        <a href="#experience" data-section="experience">[ EXPERIENCE ]</a>
-        <a href="#projects" data-section="projects">[ PROJECTS ]</a>
-        <a href="#skills" data-section="skills">[ SKILLS ]</a>
-        <a href="#contact" data-section="contact">[ CONTACT ]</a>
-        <a href="résumé.pdf_eng" id="resumeLink" data-resume-link>[ RÉSUMÉ ]</a>
-    </nav>
-
-    <main>
-        <section id="home" class="page active">
-            <div class="hero">
-                <p id="welcomeText" class="hero-text">
-                    Welcome to my Portfolio! My name is Luka Ažman and I am <br>
-                    a <span class="accent">Software Programmer</span> and <span class="accent">Game Developer</span>.
-                </p>
-                <button class="cta" data-section="experience">&gt; Explore Portfolio</button>
+    <main id="main">
+        <section class="hero" id="top">
+            <h1 class="hero-name">
+                <span class="sr">Luka Ažman</span>
+                <svg class="name-art" viewBox="0 0 1000 200" aria-hidden="true" focusable="false">
+                    <text x="0" y="186" textLength="1000" lengthAdjust="spacingAndGlyphs">LUKA AŽMAN</text>
+                </svg>
+            </h1>
+            <div class="hero-tools" aria-hidden="true">
+                <svg class="sketch tool tool--controller" aria-hidden="true" focusable="false"><use href="assets/sketch/sketches.svg#controller"/></svg>
+                <svg class="sketch tool tool--code" aria-hidden="true" focusable="false"><use href="assets/sketch/sketches.svg#code"/></svg>
+                <svg class="sketch tool tool--cube" aria-hidden="true" focusable="false"><use href="assets/sketch/sketches.svg#cube"/></svg>
+                <svg class="sketch tool tool--phone" aria-hidden="true" focusable="false"><use href="assets/sketch/sketches.svg#phone"/></svg>
             </div>
-        </section>
-
-        <section id="experience" class="page">
-            <div class="section-head">
-                <h2 id="experienceTitle">EXPERIENCE</h2>
-                <span class="section-tag">SORT: DESCENDING</span>
-            </div>
-
-            <div class="experience-list">
-                <article class="experience-entry external-card" id="exists" data-url="https://mdikranj.si" tabindex="0" role="link">
-                    <div class="exp-meta">
-                        <span class="exp-date">JUN – JUL 2026</span>
-                        <span class="exp-type" data-exptype="mdikranj">[ STUDENT WORK ]</span>
-                    </div>
-                    <h3>MDI Kranj</h3>
-                    <p class="exp-desc" data-exp="mdikranj">Built the organization's website as part of student work for Medobčinsko društvo invalidov Kranj.</p>
-                </article>
-
-                <article class="experience-entry">
-                    <div class="exp-meta">
-                        <span class="exp-date">OCT 2021</span>
-                        <span class="exp-type" data-exptype="iskraemeco">[ INTERNSHIP ]</span>
-                    </div>
-                    <h3>Iskraemeco d.d.</h3>
-                    <p class="exp-desc" data-exp="iskraemeco">IT department internship — IT maintenance and company website management.</p>
-                </article>
-            </div>
-
-            <p class="exp-footnote" id="expFootnote">Also completed seasonal part-time work in retail, hospitality, and logistics (2020–2025).</p>
-        </section>
-
-        <section id="projects" class="page">
-            <div class="section-head">
-                <h2 id="projectsTitle">PROJECTS</h2>
-            </div>
-
-            <div class="project-finder" id="projectFinder">
-                <aside class="project-sidebar" id="projectSidebar" aria-label="Project folders">
-                    <p class="project-sidebar-label" id="projectFavoritesLabel">FAVORITES</p>
-                    <div id="projectFavorites"></div>
-                    <p class="project-sidebar-label" id="projectCollectionsLabel">COLLECTIONS</p>
-                    <div id="projectCategories"></div>
-                </aside>
-                <div class="project-browser-content">
-                    <div class="project-toolbar">
-                        <div class="project-location">
-                            <span class="project-location-dot" aria-hidden="true"></span>
-                            <span id="projectPath">~/projects</span>
-                        </div>
-                        <div class="project-view-controls" id="projectViewGroup" role="group" aria-label="Project view">
-                            <button class="project-view-button is-selected" type="button" data-project-view="icons" aria-label="Icon view" title="Icon view" aria-pressed="true">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
-                            </button>
-                            <button class="project-view-button" type="button" data-project-view="list" aria-label="List view" title="List view" aria-pressed="false">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6h13M7 12h13M7 18h13"/><circle cx="4" cy="6" r=".8"/><circle cx="4" cy="12" r=".8"/><circle cx="4" cy="18" r=".8"/></svg>
-                            </button>
-                            <button class="project-view-button" type="button" data-project-view="columns" aria-label="Column view" title="Column view" aria-pressed="false">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="4" height="16" rx=".8"/><rect x="10" y="4" width="4" height="16" rx=".8"/><rect x="16" y="4" width="4" height="16" rx=".8"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-browser-heading">
-                        <div>
-                            <h3 id="projectHeading">All Projects</h3>
-                        </div>
-                    </div>
-                    <div class="project-items" id="projectGrid" data-view="icons" role="group" aria-label="Projects"></div>
-                    <div class="project-status"><span id="projectStatus">11 items</span></div>
+            <div class="hero-body">
+                <p class="hero-line" data-i18n="hero.line">Software programmer and game developer. I build games, mobile apps and websites.</p>
+                <div class="hero-actions">
+                    <a class="button" href="#work" data-i18n="hero.cta">See the projects</a>
+                    <ul class="hero-paths" aria-label="Quick paths" data-i18n-aria="hero.paths">
+                        <li><a href="#experience" data-i18n="hero.path.hire">Hiring a developer</a></li>
+                        <li><a href="#work" data-i18n="hero.path.studio">Running a game studio</a></li>
+                        <li><a href="work/mdi-kranj.html" data-i18n="hero.path.client">Need a website built</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <section id="skills" class="page">
-            <div class="section-head">
-                <h2 id="skillsTitle">SKILLS</h2>
+
+        <div class="story" id="work">
+            <section class="scene scene--gymchaos" id="gymchaos">
+                <div class="scene-copy">
+                    <h2>GymChaos</h2>
+                    <p class="statement" data-i18n="gymchaos.statement">A fitness arcade brawler in 3D. Train in the gym, build your physique, then pick a fight with the regulars.</p>
+                    <dl class="facts">
+                        <div><dt data-i18n="facts.year">Year</dt><dd>2026</dd></div>
+                        <div><dt data-i18n="facts.stack">Built with</dt><dd>Unity, C#, Blender</dd></div>
+                        <div><dt data-i18n="facts.role">My part</dt><dd data-i18n="gymchaos.role">Design, code and most of the 3D assets</dd></div>
+                    </dl>
+                    <ul class="links">
+                        <li><a href="work/gymchaos.html" data-i18n="link.case">Read the case study</a></li>
+                        <li><a href="https://lukaazman.github.io/GymChaos/" target="_blank" rel="noopener noreferrer" data-i18n="link.play">Play in the browser</a></li>
+                        <li><a href="https://github.com/lukaazman/GymChaos" target="_blank" rel="noopener noreferrer" data-i18n="link.source">Source on GitHub</a></li>
+                    </ul>
+                </div>
+                <figure class="scene-media scene-media--bleed">
+                    <picture>
+                        <source srcset="assets/projects/gymchaos.avif" type="image/avif">
+                        <img class="colour" src="assets/projects/gymchaos.webp" alt="A fist gripping a dumbbell, drawn in white and navy" data-i18n-alt="gymchaos.alt" width="1254" height="1254" loading="lazy" decoding="async">
+                    </picture>
+                    <img class="lines" src="assets/sketch/gymchaos-lines.webp" alt="" width="900" height="900" loading="lazy" decoding="async">
+                    <svg class="sketch tally" aria-hidden="true" focusable="false"><use href="assets/sketch/sketches.svg#tally"/></svg>
+                </figure>
+            </section>
+
+            <section class="scene scene--tether" id="tether">
+                <figure class="scene-media scene-media--wall">
+                    <svg class="wall" viewBox="0 0 1200 1500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Two climbers on a terracotta rock wall, tied together with one rope" data-i18n-aria="tether.alt">
+                        <image class="colour" href="assets/projects/tether-wall.webp" width="1200" height="1500"/>
+                        <image class="lines" href="assets/sketch/tether-wall-lines.webp" width="1200" height="1500"/>
+                        <rect class="dusk" width="1200" height="1500"/>
+                        <g class="party">
+                            <path class="rope" d="M196 800Q380 860 590 640"/>
+                            <image class="climber climber--partner" href="assets/projects/tether-partner.webp" x="-54" y="544" width="520" height="520"/>
+                            <image class="climber climber--player" href="assets/projects/tether-player.webp" x="387" y="312" width="400" height="520"/>
+                        </g>
+                    </svg>
+                </figure>
+                <div class="scene-copy">
+                    <h2>Tether</h2>
+                    <p class="statement" data-i18n="tether.statement">Two climbers on a terracotta wall, tied to one rope. A mobile game in MonoGame, in development for a university course.</p>
+                    <dl class="facts">
+                        <div><dt data-i18n="facts.year">Year</dt><dd data-i18n="tether.year">2026, in development</dd></div>
+                        <div><dt data-i18n="facts.stack">Built with</dt><dd>MonoGame, C#, Blender, Python</dd></div>
+                        <div><dt data-i18n="facts.role">My part</dt><dd data-i18n="tether.role">Code, the Blender wall and the scripted character art</dd></div>
+                    </dl>
+                    <ul class="links">
+                        <li><a href="work/tether.html" data-i18n="link.case">Read the case study</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="scene scene--crimson" id="crimsondawn">
+                <div class="scene-copy">
+                    <h2>CrimsonDawn</h2>
+                    <p class="statement" data-i18n="crimson.statement">A Doom-style 3D shooter written directly on WebGPU, built by a team of three for a university course.</p>
+                    <dl class="facts">
+                        <div><dt data-i18n="facts.year">Year</dt><dd>2025</dd></div>
+                        <div><dt data-i18n="facts.stack">Built with</dt><dd>WebGPU, JavaScript, Blender</dd></div>
+                        <div><dt data-i18n="facts.team">Team</dt><dd data-i18n="crimson.team">Three students</dd></div>
+                    </dl>
+                    <ul class="links">
+                        <li><a href="https://github.com/lukaazman/RG_igra" target="_blank" rel="noopener noreferrer" data-i18n="link.source">Source on GitHub</a></li>
+                    </ul>
+                </div>
+                <figure class="scene-media frame">
+                    <span class="dawn" aria-hidden="true"></span>
+                    <picture>
+                        <source srcset="assets/projects/crimsondawn.avif" type="image/avif">
+                        <img src="assets/projects/crimsondawn.webp" alt="CrimsonDawn logo: the red letters CD on black" data-i18n-alt="crimson.alt" width="1080" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                    <svg class="sketch frame-sketch" aria-hidden="true" focusable="false"><use href="assets/sketch/sketches.svg#frame-square"/></svg>
+                </figure>
+            </section>
+
+            <div class="pair">
+                <section class="scene scene--pixelife" id="pixelife">
+                    <figure class="scene-media frame">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/projects/pixelife-poster.webp" width="1108" height="623" aria-label="PixeLife main menu with a pixel-art character on a sky-blue background" data-i18n-aria="pixelife.alt">
+                            <source src="assets/projects/pixelife.webm" type="video/webm">
+                            <source src="assets/projects/pixelife.mp4" type="video/mp4">
+                        </video>
+                        <svg class="sketch frame-sketch" aria-hidden="true" focusable="false"><use href="assets/sketch/sketches.svg#frame-wide"/></svg>
+                    </figure>
+                    <div class="scene-copy">
+                        <h2>PixeLife</h2>
+                        <p class="statement" data-i18n="pixelife.statement">A pixel-art walking simulator in 2D. Drawn in Aseprite, built in Unity, with the dialogue scripted in Ink.</p>
+                        <dl class="facts">
+                            <div><dt data-i18n="facts.year">Year</dt><dd>2024</dd></div>
+                            <div><dt data-i18n="facts.stack">Built with</dt><dd>Unity, C#, Aseprite, Ink</dd></div>
+                        </dl>
+                        <ul class="links">
+                            <li><a href="https://github.com/lukaazman/PixeLife" target="_blank" rel="noopener noreferrer" data-i18n="link.source">Source on GitHub</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="scene scene--backrooms" id="backrooms">
+                    <figure class="scene-media frame">
+                        <picture>
+                            <source srcset="assets/projects/backrooms.avif" type="image/avif">
+                            <img src="assets/projects/backrooms.webp" alt="A dark corridor with a tall thin figure standing under a ceiling light" data-i18n-alt="backrooms.alt" width="1254" height="1254" loading="lazy" decoding="async">
+                        </picture>
+                        <svg class="sketch frame-sketch" aria-hidden="true" focusable="false"><use href="assets/sketch/sketches.svg#frame-square"/></svg>
+                    </figure>
+                    <div class="scene-copy">
+                        <h2>Backrooms</h2>
+                        <p class="statement" data-i18n="backrooms.statement">First-person horror in Unreal Engine, scripted entirely in Blueprints. My high-school graduation project.</p>
+                        <dl class="facts">
+                            <div><dt data-i18n="facts.year">Year</dt><dd>2022–2023</dd></div>
+                            <div><dt data-i18n="facts.stack">Built with</dt><dd>Unreal Engine, Blueprints</dd></div>
+                        </dl>
+                        <ul class="links">
+                            <li><a href="https://github.com/lukaazman/Backrooms" target="_blank" rel="noopener noreferrer" data-i18n="link.source">Source on GitHub</a></li>
+                        </ul>
+                    </div>
+                </section>
             </div>
-            <div id="skillsGrid" class="skills-grid" aria-label="Skill groups"></div>
+        </div>
+
+        <section class="archive" id="archive">
+            <div class="section-head">
+                <h2 data-i18n="archive.title">The archive drawer</h2>
+                <p class="statement" data-i18n="archive.statement">Apps, tools and websites, filed next to the games. Pull a folder to narrow it down.</p>
+            </div>
+            <div class="drawer" id="drawer" data-view="icons">
+                <div class="drawer-controls">
+                    <div class="drawer-filters" role="group" aria-label="Filter by kind" data-i18n-aria="archive.filter">
+                        <button type="button" data-filter="all" aria-pressed="true" data-i18n="kind.all">All</button>
+                        <button type="button" data-filter="game-dev" aria-pressed="false" data-i18n="kind.game">Games</button>
+                        <button type="button" data-filter="mobile-dev" aria-pressed="false" data-i18n="kind.mobile">Mobile</button>
+                        <button type="button" data-filter="ai" aria-pressed="false">AI</button>
+                        <button type="button" data-filter="web-dev" aria-pressed="false" data-i18n="kind.web">Web</button>
+                        <button type="button" data-filter="tools" aria-pressed="false" data-i18n="kind.tools">Tools</button>
+                    </div>
+                    <div class="drawer-views" role="group" aria-label="View" data-i18n-aria="archive.view">
+                        <button type="button" data-view="icons" aria-pressed="true" data-i18n="view.icons">Icons</button>
+                        <button type="button" data-view="list" aria-pressed="false" data-i18n="view.list">List</button>
+                    </div>
+                </div>
+                <ul class="drawer-items" id="drawerItems">
+                    <li class="item" id="p-fullscansecurity" data-kind="mobile-dev">
+                        <a href="https://github.com/lukaazman/FullScanSecurity" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/projects/fullscan-icon.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="item-name">FullScanSecurity</span>
+                            <span class="item-meta"><span data-i18n="kind.mobile">Mobile</span>, 2026</span>
+                            <span class="item-desc" data-i18n="p.fullscan">Free Android security scanner that reviews app access, device settings and other security signals without root access.</span>
+                            <span class="item-tags">Android, Java</span>
+                        </a>
+                    </li>
+                    <li class="item" id="p-tabtensor" data-kind="mobile-dev">
+                        <a href="https://github.com/lukaazman/TabTensor" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/projects/tabtensor-icon.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="item-name">TabTensor</span>
+                            <span class="item-meta"><span data-i18n="kind.mobile">Mobile</span>, 2026</span>
+                            <span class="item-desc" data-i18n="p.tabtensor">Guitar app for Android and iOS with a native microphone tuner, Guitar Pro, MusicXML and MIDI notation, practice playback, loops and mixing.</span>
+                            <span class="item-tags">Expo, React Native, TypeScript</span>
+                        </a>
+                    </li>
+                    <li class="item" id="p-coderouter" data-kind="ai">
+                        <a href="https://github.com/lukaazman/CodeRouter" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/projects/code-router.svg" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="item-name">CodeRouter</span>
+                            <span class="item-meta">AI, 2026</span>
+                            <span class="item-desc" data-i18n="p.coderouter">Python desktop wrapper for code agents that recreates the Codex and Claude Code workflow with free models through OpenRouter.</span>
+                            <span class="item-tags">Python, OpenRouter API</span>
+                        </a>
+                    </li>
+                    <li class="item" id="p-mdikranj" data-kind="web-dev">
+                        <a href="https://mdikranj.si" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/projects/mdi-logo.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="item-name">MDI Kranj</span>
+                            <span class="item-meta"><span data-i18n="kind.web">Web</span>, 2026</span>
+                            <span class="item-desc" data-i18n="p.mdikranj">Website for Medobčinsko društvo invalidov Kranj, built as student work and edited by the association through a CMS.</span>
+                            <span class="item-tags">JavaScript, TypeScript, Cloudflare, Decap CMS</span>
+                        </a>
+                    </li>
+                    <li class="item" id="p-cinescore" data-kind="web-dev">
+                        <a href="https://github.com/lukaazman/CineScore" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/projects/cinescore-logo.svg" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="item-name">CineScore</span>
+                            <span class="item-meta"><span data-i18n="kind.web">Web</span>, 2025</span>
+                            <span class="item-desc" data-i18n="p.cinescore">Movie review site, made by a team of two for a university course.</span>
+                            <span class="item-tags">.NET, C#, JavaScript, Azure</span>
+                        </a>
+                    </li>
+                    <li class="item" id="p-simplesearch" data-kind="tools">
+                        <a href="https://github.com/lukaazman/SimpleSearch" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/projects/simplesearch-icon.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="item-name">SimpleSearch</span>
+                            <span class="item-meta"><span data-i18n="kind.tools">Tools</span>, 2024</span>
+                            <span class="item-desc" data-i18n="p.simplesearch">Chrome extension for quicker browsing with custom commands.</span>
+                            <span class="item-tags">JavaScript, HTML, CSS</span>
+                        </a>
+                    </li>
+                    <li class="item" id="p-upnote" data-kind="tools">
+                        <a href="https://github.com/lukaazman/UpNote" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/projects/upnote-icon.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="item-name">UpNote</span>
+                            <span class="item-meta"><span data-i18n="kind.tools">Tools</span>, 2025</span>
+                            <span class="item-desc" data-i18n="p.upnote">Minimal Markdown text editor.</span>
+                            <span class="item-tags">Python, HTML, CSS</span>
+                        </a>
+                    </li>
+                    <li class="item" id="p-gymchaos" data-kind="game-dev">
+                        <a href="https://github.com/lukaazman/GymChaos" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/projects/gymchaos-icon.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="item-name">GymChaos</span>
+                            <span class="item-meta"><span data-i18n="kind.game">Games</span>, 2026</span>
+                            <span class="item-desc" data-i18n="p.gymchaos">Fitness arcade fighting game in 3D, made in Unity.</span>
+                            <span class="item-tags">Unity, C#, Blender</span>
+                        </a>
+                    </li>
+                    <li class="item" id="p-crimsondawn" data-kind="game-dev">
+                        <a href="https://github.com/lukaazman/RG_igra" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/projects/crimsondawn-icon.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="item-name">CrimsonDawn</span>
+                            <span class="item-meta"><span data-i18n="kind.game">Games</span>, 2025</span>
+                            <span class="item-desc" data-i18n="p.crimsondawn">Doom-style 3D game on WebGPU, made by a team of three for a university course.</span>
+                            <span class="item-tags">WebGPU, JavaScript, Blender</span>
+                        </a>
+                    </li>
+                    <li class="item" id="p-pixelife" data-kind="game-dev">
+                        <a href="https://github.com/lukaazman/PixeLife" target="_blank" rel="noopener noreferrer">
+                            <img class="item-pixel" src="assets/projects/pixelife-icon.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="item-name">PixeLife</span>
+                            <span class="item-meta"><span data-i18n="kind.game">Games</span>, 2024</span>
+                            <span class="item-desc" data-i18n="p.pixelife">Pixel-art walking simulator in 2D, made in Unity and Aseprite.</span>
+                            <span class="item-tags">Unity, C#, Aseprite, Ink</span>
+                        </a>
+                    </li>
+                    <li class="item" id="p-backrooms" data-kind="game-dev">
+                        <a href="https://github.com/lukaazman/Backrooms" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/projects/backrooms-icon.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="item-name">Backrooms</span>
+                            <span class="item-meta"><span data-i18n="kind.game">Games</span>, 2022–2023</span>
+                            <span class="item-desc" data-i18n="p.backrooms">3D horror game in Unreal Engine with visual scripting, my high-school graduation project.</span>
+                            <span class="item-tags">Unreal Engine, Blueprints</span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="drawer-count" id="drawerCount" aria-live="polite">11 projects</p>
+                <svg class="sketch drawer-front" aria-hidden="true" focusable="false"><use href="assets/sketch/sketches.svg#drawer"/></svg>
+            </div>
         </section>
 
-        <section id="contact" class="page">
+        <section class="experience" id="experience">
             <div class="section-head">
-                <h2 id="contactTitle">CONTACT ME</h2>
-                <span class="section-tag">CHANNELS</span>
+                <h2 data-i18n="exp.title">Experience</h2>
             </div>
-            <div class="contact-list">
-                <a class="contact-row" id="mail" href="mailto:luka.azman9@gmail.com">
-                    <span class="idx">01.</span> <span id="emailLabel">EMAIL ME</span> <span class="arrow">↗</span>
-                </a>
-                <a class="contact-row" href="https://www.linkedin.com/in/luka-azman-0275a01b1/">
-                    <span class="idx">02.</span> LINKEDIN <span class="arrow">↗</span>
-                </a>
-                <a class="contact-row" href="https://github.com/lukaazman">
-                    <span class="idx">03.</span> GITHUB <span class="arrow">↗</span>
-                </a>
-                <a class="contact-row" href="résumé.pdf_eng" data-resume-link>
-                    <span class="idx">04.</span> <span id="resumeLabel">RÉSUMÉ</span> <span class="arrow">↗</span>
-                </a>
+            <ol class="timeline">
+                <svg class="sketch timeline-line" aria-hidden="true" focusable="false"><use href="assets/sketch/sketches.svg#line"/></svg>
+                <li class="job">
+                    <p class="job-when" data-i18n="exp.mdi.when">June to July 2026</p>
+                    <div class="job-body">
+                        <h3>MDI Kranj</h3>
+                        <p class="job-role" data-i18n="exp.mdi.role">Student work: the association's new website</p>
+                        <p data-i18n="exp.mdi.text">I built the website of Medobčinsko društvo invalidov Kranj, an association of people with disabilities. It publishes news, activities, the yearly schedule and event photos. The staff edit everything through Decap CMS, the changes are saved to GitHub and Cloudflare rebuilds and publishes the site. Photos are resized and converted to WebP before upload.</p>
+                        <ul class="links">
+                            <li><a href="work/mdi-kranj.html" data-i18n="link.case">Read the case study</a></li>
+                            <li><a href="https://mdikranj.si" target="_blank" rel="noopener noreferrer" data-i18n="exp.mdi.visit">Visit mdikranj.si</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="job">
+                    <p class="job-when" data-i18n="exp.iskra.when">October 2021</p>
+                    <div class="job-body">
+                        <h3>Iskraemeco d.d.</h3>
+                        <p class="job-role" data-i18n="exp.iskra.role">Internship in the IT department</p>
+                        <p data-i18n="exp.iskra.text">IT maintenance and managing the company website.</p>
+                    </div>
+                </li>
+            </ol>
+            <p class="footnote" data-i18n="exp.footnote">Also seasonal part-time work in retail, hospitality and logistics, 2020 to 2025.</p>
+        </section>
+
+        <section class="skills" id="skills">
+            <div class="section-head">
+                <h2 data-i18n="skills.title">Skills</h2>
+                <p class="statement" data-i18n="skills.statement">Each tool points at the project where I used it. Follow the link for the proof.</p>
             </div>
+            <div class="toolbox">
+                <section class="tools" aria-labelledby="skillsLanguages">
+                    <h3 id="skillsLanguages" data-i18n="skills.languages">Languages</h3>
+                    <ul>
+                        <li><span>C#</span><a href="#gymchaos">GymChaos</a></li>
+                        <li><span>JavaScript</span><a href="#crimsondawn">CrimsonDawn</a></li>
+                        <li><span>TypeScript</span><a href="#p-tabtensor">TabTensor</a></li>
+                        <li><span>Python</span><a href="#p-coderouter">CodeRouter</a></li>
+                        <li><span>Java</span><a href="#p-fullscansecurity">FullScanSecurity</a></li>
+                        <li><span>HTML, CSS</span><a href="#p-simplesearch">SimpleSearch</a></li>
+                        <li><span>C, SQL</span><em data-i18n="skills.none">no public project yet</em></li>
+                    </ul>
+                </section>
+                <section class="tools" aria-labelledby="skillsEngines">
+                    <h3 id="skillsEngines" data-i18n="skills.engines">Frameworks and engines</h3>
+                    <ul>
+                        <li><span>Unity</span><a href="#gymchaos">GymChaos</a></li>
+                        <li><span>Unreal Engine</span><a href="#backrooms">Backrooms</a></li>
+                        <li><span>WebGPU</span><a href="#crimsondawn">CrimsonDawn</a></li>
+                        <li><span>MonoGame</span><a href="#tether">Tether</a></li>
+                        <li><span>React Native, Expo</span><a href="#p-tabtensor">TabTensor</a></li>
+                        <li><span>.NET</span><a href="#p-cinescore">CineScore</a></li>
+                        <li><span>Ink</span><a href="#pixelife">PixeLife</a></li>
+                    </ul>
+                </section>
+                <section class="tools" aria-labelledby="skillsTools">
+                    <h3 id="skillsTools" data-i18n="skills.tools">Tools and platforms</h3>
+                    <ul>
+                        <li><span>Blender</span><a href="#tether">Tether</a></li>
+                        <li><span>Aseprite</span><a href="#pixelife">PixeLife</a></li>
+                        <li><span>Android Studio</span><a href="#p-fullscansecurity">FullScanSecurity</a></li>
+                        <li><span>OpenRouter</span><a href="#p-coderouter">CodeRouter</a></li>
+                        <li><span>Decap CMS, Cloudflare</span><a href="#p-mdikranj">MDI Kranj</a></li>
+                        <li><span>Git, GitHub</span><a href="https://github.com/lukaazman" target="_blank" rel="noopener noreferrer">github.com/lukaazman</a></li>
+                        <li><span>Codex, Claude Code, Linux, Windows</span><em data-i18n="skills.daily">everyday tools</em></li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="section-head">
+                <h2 data-i18n="contact.title">Contact</h2>
+                <p class="statement" data-i18n="contact.statement">Write to me about a job, an internship, a game or a website.</p>
+            </div>
+            <a class="email" id="email" href="mailto:luka.azman9@gmail.com">luka.azman9@gmail.com</a>
+            <div class="contact-actions">
+                <button class="button" id="copyEmail" type="button" data-i18n="contact.copy">Copy the address</button>
+                <span class="copy-status" id="copyStatus" role="status"></span>
+            </div>
+            <ul class="channels">
+                <li><a href="https://www.linkedin.com/in/luka-azman-0275a01b1/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/lukaazman" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="resume-en.pdf" data-i18n="contact.cv.en">CV in English</a></li>
+                <li><a href="resume-sl.pdf" data-i18n="contact.cv.sl">CV in Slovenian</a></li>
+            </ul>
         </section>
     </main>
 
-    <footer>
-        © 2026 LUKA AŽMAN — SOFTWARE PROGRAMMER / GAME DEVELOPER
+    <footer class="footer">
+        <svg class="name-art name-art--footer" viewBox="0 0 1000 200" aria-hidden="true" focusable="false">
+            <text x="0" y="186" textLength="1000" lengthAdjust="spacingAndGlyphs">LUKA AŽMAN</text>
+        </svg>
+        <div class="footer-notes">
+            <div>
+                <p data-i18n="footer.line">© 2026 Luka Ažman. Software programmer and game developer.</p>
+                <ul class="links">
+                    <li><a href="now.html" data-i18n="footer.now">Now</a></li>
+                    <li><a href="uses.html" data-i18n="footer.uses">Uses</a></li>
+                    <li><a href="cv.html" data-i18n="footer.cv">CV</a></li>
+                </ul>
+            </div>
+            <p class="motion-offer"><a href="?motion=on" data-i18n="footer.motion">Your system asks for reduced motion. Play the animations anyway.</a></p>
+            <p data-i18n="footer.credit">PixeLife, CrimsonDawn and Backrooms are shown as whole, unedited frames; third-party assets inside them belong to their authors. Typeface: Archivo (SIL Open Font License). Motion: GSAP.</p>
+        </div>
     </footer>
-
-<!--
-╭━━━━━━━━━━━━━╮
-┃    ● ═══    ┃
-┃█████████████┃
-┃█████ A █████┃
-┃█████ Z █████┃
-┃█████ M █████┃
-┃█████ A █████┃
-┃█████ N █████┃
-┃█████████████┃
-┃      ○      ┃
-╰━━━━━━━━━━━━━╯
--->
 </body>
 </html>

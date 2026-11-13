@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-page="notfound">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Luka Ažman">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+    <title>Page not found | Luka Ažman</title>
+    <meta name="description" content="This page does not exist.">
+    <link rel="canonical" href="https://lukaazman.dev/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Page not found | Luka Ažman">
+    <meta property="og:description" content="This page does not exist.">
+    <meta property="og:url" content="https://lukaazman.dev/">
+    <meta property="og:image" content="https://lukaazman.dev/assets/og/notfound.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/tokens.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/js/flag.js"></script>
+    <script src="/js/i18n.js" type="module"></script>
+    <script src="/js/main.js" type="module"></script>
+</head>
+<body>
+    <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+    <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <filter id="chalk" x="-3%" y="-3%" width="106%" height="106%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4"/>
+        </filter>
+    </svg>
+
+    <header class="bar">
+        <a class="wordmark" href="/index.html">Luka Ažman</a>
+        <nav class="nav" id="nav" aria-label="Main" data-i18n-aria="nav.label">
+            <a href="/index.html#work" data-i18n="nav.work">Games</a>
+            <a href="/index.html#archive" data-i18n="nav.archive">Archive</a>
+            <a href="/index.html#experience" data-i18n="nav.experience">Experience</a>
+            <a href="/index.html#skills" data-i18n="nav.skills">Skills</a>
+            <a href="/index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <span class="sr" id="langStatus" role="status"></span>
+        <button class="bar-button" id="langToggle" type="button" lang="sl" data-lang-toggle>Slovensko</button>
+        <button class="bar-button bar-menu" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menu</button>
+    </header>
+
+    <main id="main" class="article">
+        <header class="article-head">
+            <h1 data-i18n="nf.title">Not on the board</h1>
+            <p class="statement" data-i18n="nf.lead">This page was wiped off or never drawn. The projects are still where they were.</p>
+            <a class="button" href="/index.html" data-i18n="nav.home">Back to the start</a>
+        </header>
+        <svg class="sketch nf-sketch" aria-hidden="true" focusable="false"><use href="/assets/sketch/sketches.svg#tally"/></svg>
+    </main>
+
+    <footer class="footer footer--small">
+        <div class="footer-notes">
+            <p data-i18n="footer.line">© 2026 Luka Ažman. Software programmer and game developer.</p>
+            <ul class="links">
+                <li><a href="/index.html" data-i18n="nav.home">Back to the start</a></li>
+                <li><a href="/now.html" data-i18n="footer.now">Now</a></li>
+                <li><a href="/uses.html" data-i18n="footer.uses">Uses</a></li>
+                <li><a href="/cv.html" data-i18n="footer.cv">CV</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

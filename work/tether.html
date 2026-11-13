@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-page="tether">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Luka Ažman">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+    <title>Tether case study | Luka Ažman</title>
+    <meta name="description" content="Tether is a mobile climbing game in MonoGame about two climbers on one rope, with a Blender wall and characters drawn by a Python script.">
+    <link rel="canonical" href="https://lukaazman.dev/work/tether">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Tether case study | Luka Ažman">
+    <meta property="og:description" content="Tether is a mobile climbing game in MonoGame about two climbers on one rope, with a Blender wall and characters drawn by a Python script.">
+    <meta property="og:url" content="https://lukaazman.dev/work/tether">
+    <meta property="og:image" content="https://lukaazman.dev/assets/og/tether.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="preload" href="../assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" imagesrcset="../assets/projects/tether-wall-720.webp 720w, ../assets/projects/tether-wall.webp 1200w" imagesizes="(max-width: 860px) 100vw, 96vw" fetchpriority="high">
+    <link rel="stylesheet" href="../tokens.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../js/flag.js"></script>
+    <script src="../js/i18n.js" type="module"></script>
+    <script src="../js/main.js" type="module"></script>
+</head>
+<body>
+    <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+    <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <filter id="chalk" x="-3%" y="-3%" width="106%" height="106%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4"/>
+        </filter>
+    </svg>
+
+    <header class="bar">
+        <a class="wordmark" href="../index.html">Luka Ažman</a>
+        <nav class="nav" id="nav" aria-label="Main" data-i18n-aria="nav.label">
+            <a href="../index.html#work" data-i18n="nav.work">Games</a>
+            <a href="../index.html#archive" data-i18n="nav.archive">Archive</a>
+            <a href="../index.html#experience" data-i18n="nav.experience">Experience</a>
+            <a href="../index.html#skills" data-i18n="nav.skills">Skills</a>
+            <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <span class="sr" id="langStatus" role="status"></span>
+        <button class="bar-button" id="langToggle" type="button" lang="sl" data-lang-toggle>Slovensko</button>
+        <button class="bar-button bar-menu" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menu</button>
+    </header>
+
+    <main id="main" class="article">
+        <header class="article-head">
+            <h1>Tether</h1>
+            <p class="statement" data-i18n="tether.statement">Two climbers on a terracotta wall, tied to one rope. A mobile game in MonoGame, in development for a university course.</p>
+            <dl class="facts">
+                <div><dt data-i18n="facts.year">Year</dt><dd><span data-i18n="tether.year">2026, in development</span></dd></div>
+                <div><dt data-i18n="facts.stack">Built with</dt><dd>MonoGame, C#, Blender, Python</dd></div>
+                <div><dt data-i18n="facts.role">My part</dt><dd><span data-i18n="tether.role">Code, the Blender wall and the scripted character art</span></dd></div>
+            </dl>
+        </header>
+        <figure class="article-figure">
+            <picture><img src="../assets/projects/tether-wall.webp" srcset="../assets/projects/tether-wall-720.webp 720w, ../assets/projects/tether-wall.webp 1200w" sizes="(max-width: 860px) 100vw, 96vw" fetchpriority="high" alt="The terracotta rock wall of Tether, rendered in Blender" data-i18n-alt="tt.alt" width="1200" height="1500"></picture>
+        </figure>
+        <section class="part">
+            <h2 data-i18n="part.idea">The idea</h2>
+            <div class="part-body">
+                <p data-i18n="tt.idea">Tether is a climbing game for phones. Two climbers move up a rock wall and share a single rope. I am building it in MonoGame for a game development course (TINR) at the Faculty of Computer and Information Science in Ljubljana.</p>
+            </div>
+        </section>
+        <section class="part">
+            <h2 data-i18n="part.built">What I built</h2>
+            <div class="part-body">
+                <ul class="points">
+                <li data-i18n="tt.b1">Every feature starts as its own small MonoGame project: drawing static images, touch and key input that changes the scene, and a first physics step where the climber moves with a starting velocity and bounces off the edges.</li>
+                <li data-i18n="tt.b2">The wall is a low-poly Blender model that a Python script generates and renders straight on.</li>
+                <li data-i18n="tt.b3">Both climbers are drawn by a Python script with Pillow, so new poses come from code and stay consistent.</li>
+                <li data-i18n="tt.b4">The chalk outline of the wall on the home page is a Freestyle line render of the same Blender model.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="part">
+            <h2 data-i18n="part.status">Status</h2>
+            <div class="part-body">
+                <p data-i18n="tt.status">In development. The repository is private for now.</p>
+            </div>
+        </section>
+        <p class="article-back"><a href="../index.html#work" data-i18n="article.back">Back to all projects</a></p>
+    </main>
+
+    <footer class="footer footer--small">
+        <div class="footer-notes">
+            <p data-i18n="footer.line">© 2026 Luka Ažman. Software programmer and game developer.</p>
+            <ul class="links">
+                <li><a href="../index.html" data-i18n="nav.home">Back to the start</a></li>
+                <li><a href="../now.html" data-i18n="footer.now">Now</a></li>
+                <li><a href="../uses.html" data-i18n="footer.uses">Uses</a></li>
+                <li><a href="../cv.html" data-i18n="footer.cv">CV</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

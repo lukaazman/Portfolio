@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-page="mdikranj">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Luka Ažman">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+    <title>MDI Kranj case study | Luka Ažman</title>
+    <meta name="description" content="The website of Medobčinsko društvo invalidov Kranj: Eleventy, Decap CMS and Cloudflare, built so the staff can run it themselves.">
+    <link rel="canonical" href="https://lukaazman.dev/work/mdi-kranj">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="MDI Kranj case study | Luka Ažman">
+    <meta property="og:description" content="The website of Medobčinsko društvo invalidov Kranj: Eleventy, Decap CMS and Cloudflare, built so the staff can run it themselves.">
+    <meta property="og:url" content="https://lukaazman.dev/work/mdi-kranj">
+    <meta property="og:image" content="https://lukaazman.dev/assets/og/mdikranj.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="preload" href="../assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" imagesrcset="../assets/projects/mdi-kranj-720.avif 720w, ../assets/projects/mdi-kranj.avif 1440w" imagesizes="(max-width: 860px) 100vw, 96vw" type="image/avif" fetchpriority="high">
+    <link rel="stylesheet" href="../tokens.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../js/flag.js"></script>
+    <script src="../js/i18n.js" type="module"></script>
+    <script src="../js/main.js" type="module"></script>
+</head>
+<body>
+    <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+    <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <filter id="chalk" x="-3%" y="-3%" width="106%" height="106%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4" result="noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4"/>
+        </filter>
+    </svg>
+
+    <header class="bar">
+        <a class="wordmark" href="../index.html">Luka Ažman</a>
+        <nav class="nav" id="nav" aria-label="Main" data-i18n-aria="nav.label">
+            <a href="../index.html#work" data-i18n="nav.work">Games</a>
+            <a href="../index.html#archive" data-i18n="nav.archive">Archive</a>
+            <a href="../index.html#experience" data-i18n="nav.experience">Experience</a>
+            <a href="../index.html#skills" data-i18n="nav.skills">Skills</a>
+            <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <span class="sr" id="langStatus" role="status"></span>
+        <button class="bar-button" id="langToggle" type="button" lang="sl" data-lang-toggle>Slovensko</button>
+        <button class="bar-button bar-menu" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menu</button>
+    </header>
+
+    <main id="main" class="article">
+        <header class="article-head">
+            <h1>MDI Kranj</h1>
+            <p class="statement" data-i18n="mdi.lead">The website of an association of people with disabilities, built so the staff can run it without a developer.</p>
+            <dl class="facts">
+                <div><dt data-i18n="facts.year">Year</dt><dd><span data-i18n="exp.mdi.when">June to July 2026</span></dd></div>
+                <div><dt data-i18n="facts.stack">Built with</dt><dd>Eleventy, Decap CMS, Cloudflare, JavaScript, TypeScript</dd></div>
+                <div><dt data-i18n="facts.role">My part</dt><dd><span data-i18n="mdi.role">Everything, as student work</span></dd></div>
+            </dl>
+        </header>
+        <figure class="article-figure">
+            <picture><source srcset="../assets/projects/mdi-kranj-720.avif 720w, ../assets/projects/mdi-kranj.avif 1440w" type="image/avif" sizes="(max-width: 860px) 100vw, 96vw"><img src="../assets/projects/mdi-kranj.webp" srcset="../assets/projects/mdi-kranj-720.webp 720w, ../assets/projects/mdi-kranj.webp 1440w" sizes="(max-width: 860px) 100vw, 96vw" fetchpriority="high" alt="Home page of the MDI Kranj website" data-i18n-alt="mdi.alt" width="1440" height="900"></picture>
+        </figure>
+        <section class="part">
+            <h2 data-i18n="mdi.problem.title">The problem</h2>
+            <div class="part-body">
+                <p data-i18n="mdi.problem">Medobčinsko društvo invalidov Kranj needed a website where members find news, activities, the yearly schedule and photos from events, next to membership information, programmes, office hours and contacts. The staff had to be able to publish all of it themselves.</p>
+            </div>
+        </section>
+        <section class="part">
+            <h2 data-i18n="part.built">What I built</h2>
+            <div class="part-body">
+                <ul class="points">
+                <li data-i18n="mdi.b1">A static site generated with Eleventy and published on Cloudflare.</li>
+                <li data-i18n="mdi.b2">An editing interface in Decap CMS. Editors log in and write; the changes are saved to GitHub, and Cloudflare rebuilds and publishes the site.</li>
+                <li data-i18n="mdi.b3">Automatic image handling: photos are resized and converted to WebP before upload.</li>
+                <li data-i18n="mdi.b4">Written documentation for the association.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="part">
+            <h2 data-i18n="part.result">Result</h2>
+            <div class="part-body">
+                <p data-i18n="mdi.result">The site is live and the association adds its own news, events and photos.</p>
+                <ul class="links">
+                <li><a href="https://mdikranj.si" target="_blank" rel="noopener noreferrer" data-i18n="exp.mdi.visit">Visit mdikranj.si</a></li>
+                </ul>
+            </div>
+        </section>
+        <p class="article-back"><a href="../index.html#experience" data-i18n="article.back">Back to all projects</a></p>
+    </main>
+
+    <footer class="footer footer--small">
+        <div class="footer-notes">
+            <p data-i18n="footer.line">© 2026 Luka Ažman. Software programmer and game developer.</p>
+            <ul class="links">
+                <li><a href="../index.html" data-i18n="nav.home">Back to the start</a></li>
+                <li><a href="../now.html" data-i18n="footer.now">Now</a></li>
+                <li><a href="../uses.html" data-i18n="footer.uses">Uses</a></li>
+                <li><a href="../cv.html" data-i18n="footer.cv">CV</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
