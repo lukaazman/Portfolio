@@ -49,7 +49,8 @@ function gymchaos(desktop) {
         const at = 0.12 + index * gap;
         timeline.fromTo(shot, { opacity: 0 }, { opacity: 1, duration: gap * 0.4, ease: 'none' }, at);
         if (plates[index]) {
-            timeline.fromTo(plates[index], { opacity: 0, scaleY: 0.4, transformOrigin: '50% 55%' }, { opacity: 1, scaleY: 1, duration: gap * 0.3, ease: 'back.out(2)' }, at)
+            // svgOrigin is the bar centre in viewBox units: a % origin needs getBBox, which is empty until the sprite loads.
+            timeline.fromTo(plates[index], { opacity: 0, scaleY: 0.4, svgOrigin: '500 110' }, { opacity: 1, scaleY: 1, duration: gap * 0.3, ease: 'back.out(2)' }, at)
                 .fromTo(plates[index], draw[0], { ...draw[1], duration: gap * 0.3 }, at);
         }
     });
