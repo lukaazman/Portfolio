@@ -75,6 +75,26 @@ def frame(name, w, h, seed):
     return symbol(name, (w, h), strokes, seed, amp=1.4, passes=2, stretch=True)
 
 
+
+def barbell():
+    """The GymChaos chalk barbell: the bar and six plate pairs, each its own
+    symbol on the same 1000 x 200 canvas so the page can load them one by one."""
+    y = 110
+    parts = [symbol("barbell-bar", (1000, 200), [
+        [(30, y - 5), (970, y - 5)], [(30, y + 5), (970, y + 5)],
+        [(280, y - 16), (280, y + 16)], [(720, y - 16), (720, y + 16)],
+    ], seed=131, amp=1.3)]
+    left, right = 268, 732
+    for index, (half, width) in enumerate([(78, 26), (78, 26), (66, 22), (66, 22), (52, 18), (40, 16)]):
+        parts.append(symbol("barbell-plate-%d" % (index + 1), (1000, 200), [
+            rounded(left - width, y - half, width, 2 * half, 6),
+            rounded(right, y - half, width, 2 * half, 6),
+        ], seed=137 + index, amp=1.0))
+        left -= width + 4
+        right += width + 4
+    return parts
+
+
 SYMBOLS = [
     symbol("controller", (200, 200), [
         [(38, 78), (62, 62), (138, 62), (162, 78), (178, 128), (166, 150), (146, 146), (128, 118), (72, 118),
@@ -119,7 +139,7 @@ SYMBOLS = [
     symbol("line", (40, 600), [[(20, 6), (18, 200), (23, 400), (20, 594)]], seed=89, amp=1.6, stretch=True),
     frame("frame-square", 400, 400, 101),
     frame("frame-wide", 640, 360, 103),
-]
+] + barbell()
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text('<svg xmlns="http://www.w3.org/2000/svg">%s</svg>\n' % "".join(SYMBOLS), encoding="utf-8", newline="\n")

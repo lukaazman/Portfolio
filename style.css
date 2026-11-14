@@ -380,29 +380,36 @@ h3 {
     margin: -5.5rem calc(var(--margin) * -1) calc(var(--margin) * -1) 0;
 }
 
-.scene--gymchaos .scene-media picture {
-    display: block;
-    height: 100%;
+/* Chalk barbell along the bottom edge: it is lifted and loaded as the frames
+   change (motion.js). Without motion it rests fully loaded. */
+.barbell {
+    position: absolute;
+    left: 18%;
+    bottom: 1%;
+    z-index: 1;
+    width: 64%;
+    height: auto;
+    color: #fff;
 }
 
-.scene--gymchaos .scene-media img {
-    height: 100%;
-    max-height: 100svh;
-    object-fit: cover;
-    object-position: center bottom;
-}
-
-.scene--gymchaos .scene-media .lines {
+/* In-game frames behind the barbell; the scroll scene swaps them (motion.js). */
+.shots {
     position: absolute;
     inset: 0;
+    overflow: clip;
 }
 
-.tally {
+.scene--gymchaos .shots .shot {
     position: absolute;
-    top: 6.5rem;
-    left: 0;
-    width: clamp(4rem, 9vw, 8.5rem);
-    aspect-ratio: 1;
+    inset: 0;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+}
+
+.shots picture + picture .shot {
+    opacity: 0;
 }
 
 .scene--tether {
@@ -482,6 +489,21 @@ h3 {
     justify-self: center;
     width: min(100%, 78svh);
     padding: clamp(0.9rem, 1.8vw, 1.75rem);
+}
+
+/* In-game frames inside the monitor: the first one shows, the scroll scene
+   cuts through the rest (motion.js). */
+.reel {
+    position: relative;
+    overflow: clip;
+}
+
+.reel picture + picture img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
 }
 
 /* CrimsonDawn: a red sun behind the monitor */
@@ -612,16 +634,29 @@ h3 {
     object-fit: cover;
 }
 
-#p-mdikranj img,
 #p-cinescore img,
 #p-simplesearch img {
     padding: 14%;
     object-fit: contain;
 }
 
+/* Icons with their own rounded background: the box continues that background. */
+#p-fullscansecurity img,
+#p-tabtensor img {
+    background: #0e0f12;
+}
+
+#p-coderouter img {
+    background: #080808;
+}
+
+#p-mdikranj img {
+    background: #fff;
+    object-fit: contain;
+}
+
 .item-pixel {
     image-rendering: pixelated;
-    object-position: left center;
 }
 
 .item-name {
@@ -894,23 +929,13 @@ h3 {
         margin: -4.5rem calc(var(--margin) * -1) 0;
     }
 
-    .scene--gymchaos .scene-media img {
-        height: auto;
-        max-height: 62svh;
-    }
-
-    .scene--gymchaos .scene-media .lines {
-        height: 100%;
+    .scene--gymchaos .scene-media {
+        aspect-ratio: 6 / 5;
     }
 
     .wall {
         height: auto;
         aspect-ratio: 1;
-    }
-
-    .tally {
-        top: 4.5rem;
-        left: var(--margin);
     }
 
     .footnote {
@@ -1160,20 +1185,17 @@ h3 {
     to { opacity: 1; translate: 0 0; }
 }
 
-/* Offered only to visitors whose system reduced the motion. */
-.motion-offer {
+/* Footer switch: shows the link that changes the current state (set by flag.js). */
+.motion .motion-on,
+html:not(.motion) .motion-off {
     display: none;
 }
 
+html:not(.motion) {
+    scroll-behavior: auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
-    html:not(.motion) .motion-offer {
-        display: block;
-    }
-
-    html:not(.motion) {
-        scroll-behavior: auto;
-    }
-
     html:not(.motion) *,
     html:not(.motion) *::before,
     html:not(.motion) *::after {
