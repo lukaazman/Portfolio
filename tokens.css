@@ -1,0 +1,61 @@
+/* Design tokens: blackboard workshop. One ground, one ink, one signal per chapter. */
+@font-face {
+    font-family: 'Archivo';
+    src: url('assets/fonts/archivo-latin.woff2') format('woff2');
+    font-weight: 400 900;
+    font-stretch: 62% 100%;
+    font-display: swap;
+    unicode-range: U+0020-007E, U+00A0, U+00A9, U+00B7, U+00C9, U+00D7, U+00E9, U+2013-2014, U+2018-2019, U+201C-201D, U+2026, U+2193;
+}
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('assets/fonts/archivo-latin-ext.woff2') format('woff2');
+    font-weight: 400 900;
+    font-stretch: 62% 100%;
+    font-display: swap;
+    unicode-range: U+010C-010D, U+0160-0161, U+017D-017E;
+}
+
+:root {
+    /* colour roles */
+    --board: #141210;
+    --board-up: #1e1b18;
+    --board-high: #2a2622;
+    --chalk: #f2ede4;
+    --chalk-dim: #b9b2a6;
+    --signal: #f4c542;
+
+    /* chapter fields, sampled from each game's own artwork */
+    --field-gymchaos: #00245b;
+    --field-tether: #6d331c;
+    --field-crimson: #000000;
+    --field-pixelife: #86d9ec;
+    --field-backrooms: #0b0b03;
+
+    --signal-gymchaos: #ffffff;
+    --signal-tether: #f6c9a0;
+    --signal-crimson: #ff2a2a;
+    --ink-pixelife: #0d1a2b;
+    --signal-backrooms: #d9d36a;
+
+    /* type */
+    --font: 'Archivo', 'Arial Narrow', Arial, sans-serif;
+    --display-stretch: 62%;
+    --size-mega: clamp(3.5rem, 15.5vw, 15rem);
+    --size-display: clamp(3rem, 10vw, 9rem);
+    --size-title: clamp(2rem, 4.6vw, 4rem);
+    --size-statement: clamp(1.25rem, 2.1vw, 1.75rem);
+    --size-body: 1.0625rem;
+    --size-small: 1rem;
+    --size-lead: clamp(1.35rem, 2.5vw, 2.25rem);
+
+    /* space */
+    --margin: clamp(1rem, 2.4vw, 2rem);
+    --section-gap: clamp(6rem, 14vw, 13rem);
+    --stack: clamp(1rem, 2vw, 1.75rem);
+
+    /* motion */
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --quick: 160ms;
+}
