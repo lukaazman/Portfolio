@@ -634,12 +634,6 @@ h3 {
     object-fit: cover;
 }
 
-#p-cinescore img,
-#p-simplesearch img {
-    padding: 14%;
-    object-fit: contain;
-}
-
 /* Icons with their own rounded background: the box continues that background. */
 #p-fullscansecurity img,
 #p-tabtensor img {

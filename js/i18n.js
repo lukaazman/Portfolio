@@ -52,8 +52,6 @@ const sl = {
     'p.tabtensor': 'Kitarska aplikacija za Android in iOS z uglaševalnikom prek mikrofona, notacijo Guitar Pro, MusicXML in MIDI, predvajanjem za vajo, zankami in mešanjem.',
     'p.coderouter': 'Namizni ovoj v Pythonu za kodirne agente, ki posnema potek dela v Codexu in Claude Code ter prek OpenRouterja uporablja brezplačne modele.',
     'p.mdikranj': 'Spletna stran Medobčinskega društva invalidov Kranj, narejena kot študentsko delo. Društvo jo ureja samo prek CMS.',
-    'p.cinescore': 'Spletna stran za ocenjevanje filmov, ki sva jo dva študenta naredila za predmet na fakulteti.',
-    'p.simplesearch': 'Razširitev za Chrome za hitrejše brskanje z ukazi po meri.',
     'p.upnote': 'Minimalističen urejevalnik besedil Markdown.',
     'p.gymchaos': 'Arkadna fitnes borilna igra v 3D, narejena v Unityju.',
     'p.crimsondawn': '3D igra v slogu Dooma na WebGPU, ki smo jo trije študenti naredili za predmet na fakulteti.',
